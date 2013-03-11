@@ -8,13 +8,15 @@ html
     #wrapper
       header
         nav#menu
-          span ola
-          span ke
-          span ase
+          span= link_to_unless_current "AEiG Cardenal Lluch", "#"
+          span= link_to_unless_current "Sobre nosaltres", "#aboutus"
+          span= link_to_unless_current "Unitats", "#units"
+          span= link_to_unless_current "Galeria", "#gallery"
+          span= link_to_unless_current "Contacte", "#contact"
       section#content
         = yield
       footer
         nav#social
-          span facebook
-          span twitter
-          span correu
+          = link_to "Facebook", "#"
+          = link_to "Twitter", "#"
+          = link_to "Correu", "#"
