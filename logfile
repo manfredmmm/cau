@@ -1,0 +1,6 @@
+LOG:  could not bind IPv4 socket: Can't assign requested address
+HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+LOG:  database system was shut down at 2013-03-11 21:06:13 CET
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "cau_database" does not exist
