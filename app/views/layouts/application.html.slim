@@ -5,18 +5,17 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
-    #wrapper
-      header
-        nav#menu
-          span= link_to_unless_current "AEiG Cardenal Lluch", "#"
-          span= link_to_unless_current "Sobre nosaltres", "#aboutus"
-          span= link_to_unless_current "Unitats", "#units"
-          span= link_to_unless_current "Galeria", "#gallery"
-          span= link_to_unless_current "Contacte", "#contact"
-      section#content
-        = yield
-      footer
-        nav#social
-          = link_to "Facebook", "#"
-          = link_to "Twitter", "#"
-          = link_to "Correu", "#"
+    header
+      nav#menu
+        = link_to_unless_current "AEiG Cardenal Lluch", "#"
+        = link_to_unless_current "Sobre nosaltres", "#aboutus"
+        = link_to_unless_current "Unitats", "#units"
+        = link_to_unless_current "Galeria", "#gallery"
+        = link_to_unless_current "Contacte", "#contact"
+    section#content
+      = yield
+    footer
+      nav#social
+        = link_to "Facebook", "#"
+        = link_to "Twitter", "#"
+        = link_to "Correu", "#"
