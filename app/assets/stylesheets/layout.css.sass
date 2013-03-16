@@ -5,12 +5,25 @@ body
   font-family: $text
   width: 100%
   margin: 0 auto
+  margin-top: 100px
   
   header
     border-bottom: 1px solid $grey
+    position: fixed
+    top: 0
+    left: 0
+    height: 55px
+    width: 100%
+    z-index: 9999
+    background-color: $white
+    +opacity(0.9)
+    section.logo
+      a
+        text-align: left
+        line-height: 55px
     nav#menu
-      width: 960px
-      margin: 0 auto
+      line-height: 55px
+      text-align: right
 
   #content
     width: 960px

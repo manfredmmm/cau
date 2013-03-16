@@ -1,13 +1,15 @@
 doctype html
 html
   head
+    title AEiG Cardenal Lluch
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
     header
+      section.logo
+        = link_to_unless_current "AEiG Cardenal Lluch", "#", class: "home"
       nav#menu
-        = link_to_unless_current "AEiG Cardenal Lluch", "#"
         = link_to_unless_current "Sobre nosaltres", "#aboutus"
         = link_to_unless_current "Unitats", "#units"
         = link_to_unless_current "Galeria", "#gallery"

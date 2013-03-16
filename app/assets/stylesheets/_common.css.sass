@@ -2,9 +2,17 @@
 @import "variables"
 
 h1
-  color: $blue
+  color: $black
   font-family: $title
  
 h2
   color: $grey
   font-family: $text
+
+a
+  color: $grey
+  text-decoration: none
+  &:hover
+    color: $blue
+    +transition-duration(0.4s)
+    //text-decoration: none
