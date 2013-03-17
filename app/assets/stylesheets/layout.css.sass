@@ -3,9 +3,12 @@
 
 body
   font-family: $text
+  font-size: 16px
   width: 100%
   margin: 0 auto
   margin-top: 100px
+  margin-bottom: 50px
+  background: image-url("bg.png")
   
   header
     border-bottom: 1px solid $grey
@@ -26,6 +29,7 @@ body
         width: 200px
         height: 55px
     nav#menu
+      font-size: 16px
       font-family: $title
       line-height: 55px
       text-align: right
@@ -48,8 +52,17 @@ body
     width: 100%
     background-color: $white
     +box-shadow($white 0 0 10px)
+    height: 30px
+    +opacity(0.9)
     nav#social
-      width: 960px
+      font-family: $title
+      font-size: 12px
       margin: 0 auto
+      line-height: 30px
+      margin-right: 20px
       a
         float: right
+        padding: 0 10px
+        border-right: 1px dotted #eee
+        &.last
+          border: none
