@@ -16,21 +16,26 @@ body
     z-index: 9999
     background-color: $white
     +opacity(0.9)
-    +box-shadow($white 0 0 10px)
+    +box-shadow($white 0 0 20px)
     section.logo
       width: 200px
       height: 55px
       float: left
+      margin-left: 50px
       img
         width: 200px
         height: 55px
     nav#menu
+      font-family: $title
       line-height: 55px
       text-align: right
       float: right
+      margin-right: 20px
       a
         padding: 0 10px
         border-right: 1px dotted #eee
+        &.last
+          border: none
 
   #content
     width: 960px

@@ -13,7 +13,7 @@ html
         = link_to_unless_current "Sobre nosaltres", "#aboutus"
         = link_to_unless_current "Unitats", "#units"
         = link_to_unless_current "Galeria", "#gallery"
-        = link_to_unless_current "Contacte", "#contact"
+        = link_to_unless_current "Contacte", "#contact", class: "last"
     section#content
       = yield
     footer
