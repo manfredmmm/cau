@@ -11,19 +11,26 @@ body
     border-bottom: 1px solid $grey
     position: fixed
     top: 0
-    left: 0
     height: 55px
     width: 100%
     z-index: 9999
     background-color: $white
     +opacity(0.9)
+    +box-shadow($white 0 0 10px)
     section.logo
-      a
-        text-align: left
-        line-height: 55px
+      width: 200px
+      height: 55px
+      float: left
+      img
+        width: 200px
+        height: 55px
     nav#menu
       line-height: 55px
       text-align: right
+      float: right
+      a
+        padding: 0 10px
+        border-right: 1px dotted #eee
 
   #content
     width: 960px
@@ -31,6 +38,11 @@ body
 
   footer
     border-top: 1px solid $grey
+    position: fixed
+    bottom: 0
+    width: 100%
+    background-color: $white
+    +box-shadow($white 0 0 10px)
     nav#social
       width: 960px
       margin: 0 auto

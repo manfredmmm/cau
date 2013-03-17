@@ -8,7 +8,7 @@ html
   body
     header
       section.logo
-        = link_to_unless_current "AEiG Cardenal Lluch", "#", class: "home"
+        = link_to_unless_current image_tag("logo.png"), "#", class: "home", title: "AEiG Cardenal Lluch"
       nav#menu
         = link_to_unless_current "Sobre nosaltres", "#aboutus"
         = link_to_unless_current "Unitats", "#units"
@@ -18,6 +18,6 @@ html
       = yield
     footer
       nav#social
-        = link_to "Facebook", "#"
-        = link_to "Twitter", "#"
-        = link_to "Correu", "#"
+        = link_to "Facebook", "#", target: "_blank"
+        = link_to "Twitter", "#", target: "_blank"
+        = link_to "Correu", "#", target: "_blank"

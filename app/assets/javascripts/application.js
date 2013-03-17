@@ -13,3 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function () {
+  $('nav#menu a').on("click", function (e) {
+    alert('hola');
+    e.preventDefault();
+  };
+};
