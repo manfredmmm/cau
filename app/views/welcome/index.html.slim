@@ -1,20 +1,24 @@
-section#welcome
-  h1= "AEiG Cardenal Lluch"
-  = image_tag("image.png")
-  p= "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacus erat, ultrices eu semper ut, sagittis vitae purus. Donec vitae imperdiet magna. Suspendisse potenti. Sed lobortis leo sed orci luctus ac blandit nisl egestas. Vivamus aliquet congue dignissim. Quisque non dignissim urna. Aliquam fermentum, magna id tempus egestas, nisi neque accumsan justo, eu cursus nisi velit et enim. Etiam orci quam, posuere in iaculis eu, feugiat a leo. Praesent porttitor sodales vestibulum. Duis eget arcu vitae risus fringilla egestas vitae vel erat. Quisque sit amet velit diam. Curabitur sodales pharetra lacus, in luctus nunc tincidunt eget. Vivamus id consectetur nulla. Suspendisse auctor erat sit amet tortor bibendum fermentum. Praesent id libero turpis. Suspendisse malesuada adipiscing purus, non condimentum eros ullamcorper eu. Sed tortor mauris, tempus sit amet posuere vitae, consequat ut dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi lorem enim, condimentum at commodo eu, ultricies non neque. Aenean velit tortor, convallis ac aliquam ut, commodo sit amet arcu. Ut ut suscipit dui. Sed iaculis vestibulum molestie."
+h1 AEiG Cardenal Lluch
+- unless @news.blank?
+  section#news
+    h2= @news.title
+    = image_tag(@news.image_url)
+    p= @news.content
 
-section#aboutus
-  h2 sobre nosaltres
-  p= "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacus erat, ultrices eu semper ut, sagittis vitae purus. Donec vitae imperdiet magna. Suspendisse potenti. Sed lobortis leo sed orci luctus ac blandit nisl egestas. Vivamus aliquet congue dignissim. Quisque non dignissim urna. Aliquam fermentum, magna id tempus egestas, nisi neque accumsan justo, eu cursus nisi velit et enim. Etiam orci quam, posuere in iaculis eu, feugiat a leo. Praesent porttitor sodales vestibulum. Duis eget arcu vitae risus fringilla egestas vitae vel erat. Quisque sit amet velit diam. Curabitur sodales pharetra lacus, in luctus nunc tincidunt eget. Vivamus id consectetur nulla. Suspendisse auctor erat sit amet tortor bibendum fermentum. Praesent id libero turpis. Suspendisse malesuada adipiscing purus, non condimentum eros ullamcorper eu. Sed tortor mauris, tempus sit amet posuere vitae, consequat ut dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi lorem enim, condimentum at commodo eu, ultricies non neque. Aenean velit tortor, convallis ac aliquam ut, commodo sit amet arcu. Ut ut suscipit dui. Sed iaculis vestibulum molestie."
-  = image_tag("image.png")
+- unless @aboutus.blank?
+  section#aboutus
+    h2= @aboutus.title
+    p= @aboutus.content
+    = image_tag(@aboutus.image_url)
 
-section#units
-  h2 unitats
-  = image_tag("image.png")
-  p= "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacus erat, ultrices eu semper ut, sagittis vitae purus. Donec vitae imperdiet magna. Suspendisse potenti. Sed lobortis leo sed orci luctus ac blandit nisl egestas. Vivamus aliquet congue dignissim. Quisque non dignissim urna. Aliquam fermentum, magna id tempus egestas, nisi neque accumsan justo, eu cursus nisi velit et enim. Etiam orci quam, posuere in iaculis eu, feugiat a leo. Praesent porttitor sodales vestibulum. Duis eget arcu vitae risus fringilla egestas vitae vel erat. Quisque sit amet velit diam. Curabitur sodales pharetra lacus, in luctus nunc tincidunt eget. Vivamus id consectetur nulla. Suspendisse auctor erat sit amet tortor bibendum fermentum. Praesent id libero turpis. Suspendisse malesuada adipiscing purus, non condimentum eros ullamcorper eu. Sed tortor mauris, tempus sit amet posuere vitae, consequat ut dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi lorem enim, condimentum at commodo eu, ultricies non neque. Aenean velit tortor, convallis ac aliquam ut, commodo sit amet arcu. Ut ut suscipit dui. Sed iaculis vestibulum molestie."
+- unless @units.blank?
+  section#units
+    h2= @units.title
+    = image_tag(@units.image_url)
+    p= @units.content
 
 section#gallery
-  h2 les nostres installacions
+  h2= "Les nostres instal·lacions"
   = image_tag("image.png")
   = image_tag("image.png")
   = image_tag("image.png")

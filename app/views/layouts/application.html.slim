@@ -8,10 +8,11 @@ html
   body
     header
       section.logo
-        = link_to_unless_current image_tag("logo.png"), "#", class: "home", title: "AEiG Cardenal Lluch"
+        = link_to_unless_current image_tag("logo.png"), root_path, class: "home", title: "AEiG Cardenal Lluch"
       nav#menu
-        = link_to_unless_current "Sobre nosaltres", "#aboutus"
-        = link_to_unless_current "Unitats", "#units"
+        = link_to_unless_current @news.title, "#news" unless @news.blank?
+        = link_to_unless_current @aboutus.title, "#aboutus" unless @aboutus.blank?
+        = link_to_unless_current @units.title, "#units" unless @units.blank?
         = link_to_unless_current "Galeria", "#gallery"
         = link_to_unless_current "Contacte", "#contact", class: "last"
     section#content
