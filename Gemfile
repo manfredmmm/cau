@@ -9,7 +9,6 @@ gem 'inherited_resources'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'font-awesome-sass-rails'
-gem 'quiet_assets'
 gem 'inherited_resources'
 
 group :assets do
@@ -18,4 +17,9 @@ group :assets do
   gem 'compass-rails'
   gem 'jquery-ui-rails'
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development do
+  gem 'thin'
+  gem 'quiet_assets'
 end
