@@ -1,0 +1,7 @@
+h1= "Escull el contingut de la secció que vols canviar:"
+
+ul#sections
+  - @sections.each do |section|
+    li= link_to section.title, edit_admin_section_path(section)
+
+p= link_to "Crear nova secció", new_admin_section_path

@@ -1,0 +1,11 @@
+= simple_form_for [:admin, @section], validate: true do |f|
+  = f.input :name
+  = f.input :title
+  = f.input :content
+  - unless @section.image.blank?
+    = image_tag(@section.image)
+  = f.input :image, as: :file, label: false
+
+  = f.submit
+
+= link_to "Tornar al índex", admin_root_path

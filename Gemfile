@@ -6,9 +6,11 @@ gem 'jquery-rails'
 gem 'slim-rails'
 gem 'simple_form'
 gem 'inherited_resources'
+gem 'carrierwave'
 gem 'rmagick'
 gem 'font-awesome-sass-rails'
 gem 'quiet_assets'
+gem 'inherited_resources'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

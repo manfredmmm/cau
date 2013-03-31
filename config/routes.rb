@@ -3,7 +3,7 @@ Cau::Application.routes.draw do
   root to: "welcome#index"
 
   namespace :admin do
-    resources :news_items
-    resources :settings
+    root to: "sections#index"
+    resources :sections
   end
 end
