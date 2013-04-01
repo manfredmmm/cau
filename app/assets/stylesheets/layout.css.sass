@@ -2,8 +2,9 @@
 @import "common"
 
 body
-  font-family: $text
-  font-size: 16px
+  font-family: $text, Helvetica, arial
+  font-size: 19px
+  letter-spacing: 0.06em
   width: 100%
   margin: 0 auto
   margin-top: 100px
@@ -26,8 +27,17 @@ body
       float: left
       margin-left: 50px
       img
-        width: 200px
+        width: 49px
         height: 55px
+        float: left
+      a.title
+        float: left
+        width: 130px
+        line-height: 55px
+        font-family: $title
+        padding-left: 11px
+        font-size: 14px
+        color: $black
     nav#menu
       font-size: 16px
       font-family: $title

@@ -8,7 +8,8 @@ html
   body
     header
       section.logo
-        = link_to_unless_current image_tag("logo.png"), root_path, class: "home", title: "AEiG Cardenal Lluch"
+        = link_to image_tag("cardenallluch.png"), root_path, class: "home", title: "AEiG Cardenal Lluch"
+        = link_to "AEiG Cardenal Lluch", root_path, class: "title"
       nav#menu
         = link_to_unless_current @news.title, "#news" unless @news.blank?
         = link_to_unless_current @aboutus.title, "#aboutus" unless @aboutus.blank?
