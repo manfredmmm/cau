@@ -1,0 +1,11 @@
+= simple_form_for [:admin, @slideshow], validate: true do |f|
+  = f.input :name
+
+  h3 Fotos
+  #slides
+    = f.simple_fields_for :slides do |slide|
+      = render 'slide_fields', :f => slide
+    .links
+      = link_to_add_association 'Afegir foto', f, :slides
+
+  = f.submit

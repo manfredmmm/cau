@@ -1,0 +1,5 @@
+p= @slideshow.name
+
+ul
+  - @slideshow.slides.each do |slide|
+    li= image_tag slide.image_url(:thumb)

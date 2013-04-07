@@ -1,0 +1,8 @@
+h1= "Canvia els fotos dels slideshows:"
+
+ul
+  - @slideshows.each do |slideshow|
+    li= link_to slideshow.name, edit_admin_slideshow_path(slideshow)
+
+p= link_to "Crear slideshow", new_admin_slideshow_path
+p= link_to "Tornar"

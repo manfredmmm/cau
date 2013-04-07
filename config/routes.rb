@@ -5,6 +5,8 @@ Cau::Application.routes.draw do
   namespace :admin do
     root to: "admin#index"
     resources :sections
-    resources :slides
+    resources :slideshows do
+      resources :slides
+    end
   end
 end
