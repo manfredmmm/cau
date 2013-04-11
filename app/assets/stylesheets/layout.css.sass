@@ -10,7 +10,6 @@ body
   margin-top: 55px
   margin-bottom: 50px
   background: image-url("bg.png")
-  //background: image-url("body.jpg")
   
   header
     border-bottom: 1px solid $grey
@@ -52,16 +51,21 @@ body
         &.last
           border: none
 
+  section#cover
+    min-height: 400px
+    margin-bottom: 25px
+    margin: 0 auto
+    +background-size(cover)
+    +box-shadow(inset $grey 1px 1px 20px)
+    background:
+      image: image-url("portada.png")
+      repeat: no-repeat
+      position: top left
+
+
   #content
     width: 960px
     margin: 0 auto
-    section#cover
-      width: 960px
-      height: 400px
-      margin-bottom: 25px
-      img
-        width: 960px
-        height: 400px
 
   footer
     border-top: 1px solid $grey

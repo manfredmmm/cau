@@ -16,7 +16,7 @@ html
         = link_to_unless_current @units.title, "#units" unless @units.blank?
         = link_to_unless_current "Galeria", "#gallery"
         = link_to_unless_current "Contacte", "#contact", class: "last"
-    section#content
+    section.content
       = yield
     footer
       nav#social

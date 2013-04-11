@@ -1,37 +1,38 @@
 section#cover
-  = image_tag("portada.png")
+  //= image_tag("portada.png")
 
-section#slideshow
-  = image_tag("portada.png")
+//section#slideshow
+  //= image_tag("portada.png")
 
-- unless @news.blank?
-  section#news
-    h2= @news.title
-    = image_tag(@news.image_url)
-    p= @news.content
+section#content
+  - unless @news.blank?
+    section#news
+      h2= @news.title
+      = image_tag(@news.image_url)
+      p= @news.content
 
-- unless @aboutus.blank?
-  section#aboutus
-    h2= @aboutus.title
-    p= @aboutus.content
-    = image_tag(@aboutus.image_url)
+  - unless @aboutus.blank?
+    section#aboutus
+      h2= @aboutus.title
+      p= @aboutus.content
+      = image_tag(@aboutus.image_url)
 
-- unless @units.blank?
-  section#units
-    h2= @units.title
-    = image_tag(@units.image_url)
-    p= @units.content
+  - unless @units.blank?
+    section#units
+      h2= @units.title
+      = image_tag(@units.image_url)
+      p= @units.content
 
-section#gallery
-  h2= "Les nostres instal·lacions"
-  = image_tag("image.png")
-  = image_tag("image.png")
-  = image_tag("image.png")
+  section#gallery
+    h2= "Les nostres instal·lacions"
+    = image_tag("image.png")
+    = image_tag("image.png")
+    = image_tag("image.png")
 
-section#contact
-  h2 contacte
-  = google_map
-  #info
-    p Carrer Vallfonollosa 11, principal
-    p Manresa 08241
-    p= mail_to "cardenallluch@gmail.com", "Envia'ns un correu!", subject: "Contacte via web"
+  section#contact
+    h2 contacte
+    = google_map
+    #info
+      p Carrer Vallfonollosa 11, principal
+      p Manresa 08241
+      p= mail_to "cardenallluch@gmail.com", "Envia'ns un correu!", subject: "Contacte via web"
