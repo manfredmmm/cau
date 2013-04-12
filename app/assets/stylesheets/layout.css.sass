@@ -4,7 +4,7 @@
 body
   font-family: $text, Helvetica, arial
   font-size: 19px
-  letter-spacing: 0.06em
+  letter-spacing: 0.08em
   width: 100%
   margin: 0 auto
   margin-top: 55px
@@ -20,7 +20,7 @@ body
     z-index: 9999
     background-color: $white
     +opacity(0.9)
-    +box-shadow($white 0 0 20px)
+    +box-shadow($grey 0 0 20px)
     section.logo
       width: 200px
       height: 55px
@@ -52,16 +52,16 @@ body
           border: none
 
   section#cover
-    min-height: 400px
-    margin-bottom: 25px
+    +clearfix
+    height: 500px
     margin: 0 auto
     +background-size(cover)
-    +box-shadow(inset $grey 1px 1px 20px)
+    +box-shadow(inset black 0 0 30px)
+    +filter(blur(2px))
     background:
-      image: image-url("portada.png")
+      image: image-url("p1.jpg")
       repeat: no-repeat
-      position: top left
-
+      position: center center
 
   #content
     width: 960px
@@ -73,7 +73,7 @@ body
     bottom: 0
     width: 100%
     background-color: $white
-    +box-shadow($white 0 0 15px)
+    +box-shadow($grey 0 0 20px)
     height: 30px
     nav#social
       font-family: $title

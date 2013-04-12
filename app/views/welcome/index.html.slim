@@ -1,8 +1,4 @@
 section#cover
-  //= image_tag("portada.png")
-
-//section#slideshow
-  //= image_tag("portada.png")
 
 section#content
   - unless @news.blank?
@@ -30,7 +26,7 @@ section#content
     = image_tag("image.png")
 
   section#contact
-    h2 contacte
+    h2= "On som i com ens podeu trobar"
     = google_map
     #info
       p Carrer Vallfonollosa 11, principal
