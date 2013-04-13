@@ -7,65 +7,41 @@ body
   letter-spacing: 0.08em
   width: 100%
   margin: 0 auto
-  margin-top: 55px
   margin-bottom: 50px
   background: image-url("bg.png")
   
   header
     border-bottom: 1px solid $grey
-    position: fixed
-    top: 0
+    position: absolute
+    top: 500px
     height: 55px
     width: 100%
     z-index: 9999
     background-color: $white
     +opacity(0.9)
     +box-shadow($grey 0 0 20px)
-    section.logo
-      width: 200px
-      height: 55px
-      float: left
-      margin-left: 50px
-      img
-        width: 49px
-        height: 55px
-        float: left
-      a.title
-        float: left
-        width: 130px
-        line-height: 55px
-        font-family: $title
-        padding-left: 11px
-        font-size: 14px
-        color: $black
     nav#menu
+      width: 960px
+      margin: 0 auto
       font-size: 16px
       font-family: $title
       line-height: 55px
-      text-align: right
-      float: right
-      margin-right: 20px
+      height: 55px
+      img
+        margin-top: 5px
+        width: 35px
+        height: 44px
+        float: left
       a
         padding: 0 10px
         border-right: 1px dotted #eee
-        &.last
+        &.last, &.home
           border: none
-
-  section#cover
-    +clearfix
-    height: 500px
-    margin: 0 auto
-    +background-size(cover)
-    +box-shadow(inset black 0 0 30px)
-    +filter(blur(2px))
-    background:
-      image: image-url("p1.jpg")
-      repeat: no-repeat
-      position: center center
 
   #content
     width: 960px
     margin: 0 auto
+    margin-top: 120px
 
   footer
     border-top: 1px solid $grey
