@@ -1,3 +1,5 @@
+/*global $, window*/
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -14,3 +16,24 @@
 //= require jquery_ujs
 //= require_tree .
 //= require cocoon
+
+$(function () {
+    "use strict";
+
+    var MenuController;
+
+    MenuController = function () {
+        this.navigationEl = $('nav#menu');
+        this.navigationEl.on("click", "a", $.proxy(this.chooseSection, this));
+
+    };
+
+    MenuController.prototype.chooseSection  = function (event) {
+        var sectionId = $(event.currentTarget).attr('href');
+        $('html, body').animate({
+            scrollTop: $(sectionId).offset().top
+        }, 1500);
+    };
+
+    window.menuController = new MenuController();
+});
