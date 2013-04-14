@@ -20,12 +20,24 @@
 $(function () {
     "use strict";
 
+
+
     var MenuController;
 
     MenuController = function () {
         this.navigationEl = $('nav#menu');
         this.navigationEl.on("click", "a", $.proxy(this.chooseSection, this));
 
+        $('footer').hide();
+        $(window).scroll(function () {
+            if ($(window).scrollTop() < 500) {
+                $('header').removeClass('fixed');
+                $('footer').fadeOut();
+            } else {
+                $('header').addClass('fixed');
+                $('footer').fadeIn();
+            }
+        });
     };
 
     MenuController.prototype.chooseSection  = function (event) {

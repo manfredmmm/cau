@@ -20,6 +20,9 @@ body
     background-color: $white
     +opacity(0.9)
     +box-shadow($grey 0 0 20px)
+    &.fixed
+      position: fixed
+      top: 0
     nav#menu
       width: 960px
       margin: 0 auto
@@ -58,7 +61,7 @@ body
       font-size: 12px
       margin: 0 auto
       line-height: 30px
-      margin-right: 20px
+      width: 960px
       a
         float: right
         padding: 0 10px
