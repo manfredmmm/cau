@@ -43,8 +43,9 @@ $(function () {
     MenuController.prototype.chooseSection  = function (event) {
         var sectionId = $(event.currentTarget).attr('href');
         $('html, body').animate({
-            scrollTop: $(sectionId).offset().top
-        }, 1500);
+            scrollTop: ($(sectionId).offset().top - 116)
+        }, 1250);
+        event.preventDefault();
     };
 
     window.menuController = new MenuController();
