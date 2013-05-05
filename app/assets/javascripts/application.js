@@ -20,8 +20,6 @@
 $(function () {
     "use strict";
 
-
-
     var MenuController;
 
     MenuController = function () {
@@ -32,10 +30,10 @@ $(function () {
         $(window).scroll(function () {
             if ($(window).scrollTop() < 500) {
                 $('header').removeClass('fixed');
-                $('footer').fadeOut();
+                $('footer').hide();
             } else {
                 $('header').addClass('fixed');
-                $('footer').fadeIn();
+                $('footer').show();
             }
         });
     };

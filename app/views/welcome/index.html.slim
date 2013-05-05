@@ -21,8 +21,8 @@ section#cover
 
   section#caps
     h2= @caps.title
-    = image_tag(@units.image_url) unless @caps.image_url.blank?
-    p= @units.content
+    p= @caps.content
+    = image_tag(@caps.image_url) unless @caps.image_url.blank?
 
   section#gallery
     h2= "Les nostres instal·lacions"
@@ -34,5 +34,5 @@ section#cover
     #info
       p Carrer Vallfonollosa 11, principal
       p Manresa 08241
-      p= mail_to "cardenallluch@gmail.com", "Envia'ns un correu!", subject: "Contacte via web"
       p= "Horari: Dissabtes de 16h a 19h."
+      p= mail_to "cardenallluch@gmail.com", "Envia'ns un correu!", subject: "Contacte via web"
