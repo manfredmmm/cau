@@ -16,6 +16,8 @@
 //= require jquery_ujs
 //= require_tree .
 //= require cocoon
+//= require jquery-1.7.2.min
+//= require lightbox
 
 $(function () {
     "use strict";
