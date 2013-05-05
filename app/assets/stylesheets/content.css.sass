@@ -1,14 +1,13 @@
 @import "common"
 
 section#cover
-  +clearfix
   height: 500px
-  margin: 0 auto
   +background-size(cover)
   +box-shadow(inset black 0 0 30px)
   +filter(blur(1px))
+  width: 100%
   background:
-    image: image-url("p1.jpg")
+    //image: image-url("p1.jpg")
     repeat: no-repeat
     position: center center
 
@@ -28,7 +27,16 @@ section#cover
     color: $grey
     font-size: 18px
 
-#news, #aboutus, #units, #contact, #gallery
+#news
+  +clearfix
+  background-color: white
+  +border-radius(5px)
+  +box-shadow($grey 0 0 20px)
+  border: 1px solid $grey
+  margin-top: 60px
+  padding: 80px
+
+#aboutus, #units, #contact, #gallery, #caps
   +clearfix
   background-color: white
   +border-radius(5px)
@@ -52,7 +60,7 @@ section#cover
   p
     margin-left: 15px
 
-#aboutus
+#aboutus, #caps
   h2
     text-align: right
   img

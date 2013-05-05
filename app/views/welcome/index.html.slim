@@ -4,29 +4,28 @@ section#cover
   h2= "Agrupament Escolta i Guia"
   h1= "Cardenal Lluch"
 
-section#content
-  - unless @news.blank?
-    section#news
-      h2= @news.title
-      = image_tag(@news.image_url)
-      p= @news.content
+#content
+  section#news
+    h2= @news.title
+    p= @news.content
 
-  - unless @aboutus.blank?
-    section#aboutus
-      h2= @aboutus.title
-      p= @aboutus.content
-      = image_tag(@aboutus.image_url)
+  section#aboutus
+    h2= @aboutus.title
+    p= @aboutus.content unless @aboutus.image_url.blank?
+    = image_tag(@aboutus.image_url)
 
-  - unless @units.blank?
-    section#units
-      h2= @units.title
-      = image_tag(@units.image_url)
-      p= @units.content
+  section#units
+    h2= @units.title
+    = image_tag(@units.image_url) unless @units.image_url.blank?
+    p= @units.content
+
+  section#caps
+    h2= @caps.title
+    = image_tag(@units.image_url) unless @caps.image_url.blank?
+    p= @units.content
 
   section#gallery
     h2= "Les nostres instal·lacions"
-    = image_tag("image.png")
-    = image_tag("image.png")
     = image_tag("image.png")
 
   section#contact
