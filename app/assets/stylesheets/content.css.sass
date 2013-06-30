@@ -1,32 +1,5 @@
 @import "common"
 
-section#cover
-  height: 500px
-  +background-size(cover)
-  +box-shadow(inset black 0 0 30px)
-  +filter(blur(1px))
-  width: 100%
-  background:
-    image: image-url("p1.jpg")
-    repeat: no-repeat
-    position: center center
-
-.title_cover
-  position: absolute
-  top: 100px
-  left: 300px
-  h1, h2
-    font-family: "Aaa"
-    text-rendering: optimizelegibility
-    +text-shadow(black 1px 1px 1px, $grey 0 -1px 1px)
-  h1
-    font-size: 48px
-    color: white
-    font-weight: bold
-  h2
-    color: $light-grey
-    font-size: 18px
-
 #news, #contact, #gallery
   +clearfix
   background-color: white

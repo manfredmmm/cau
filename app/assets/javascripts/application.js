@@ -18,9 +18,24 @@
 //= require cocoon
 //= require jquery-1.7.2.min
 //= require lightbox
+//= require jquery.superslides.min
 
 $(function () {
     "use strict";
+
+    $('#slides').superslides({
+        play: false,
+        slide_speed: 'normal',
+        slide_easing: 'linear',
+        pagination: true,
+        hashchange: false,
+        scrollable: true
+        //classes:
+        //    preserve: 'preserve',
+        //    nav: 'slides-navigation',
+        //    container: 'slides-container',
+        //    pagination: 'slides-pagination
+    });
 
     var MenuController;
 
@@ -30,7 +45,7 @@ $(function () {
 
         $('footer').hide();
         $(window).scroll(function () {
-            if ($(window).scrollTop() < 500) {
+            if ($(window).scrollTop() < ($(this).height() - 56)) {
                 $('header').removeClass('fixed');
                 $('footer').hide();
             } else {
