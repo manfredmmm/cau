@@ -8,11 +8,31 @@
   h1, h2, h3
     font-family: "Aaa"
     text-rendering: optimizelegibility
-    +text-shadow(black 1px 1px 1px, $grey 0 -1px 1px)
+    +text-shadow($black 1px 1px 5px, $grey 0 -1px 3px)
   h1
-    font-size: 48px
-    color: white
+    font-size: 60px
+    color: $white
     font-weight: bold
   h2
-    color: $light-grey
-    font-size: 18px
+    font-size: 35px
+    color: $white
+  .container
+    position: absolute
+    h3
+      font-size: 22px
+      color: $white
+
+#slides
+  a.next, a.prev
+    color: $white
+    +text-shadow($black 1px 1px 5px)
+    &:hover
+      color: lighten($grey, 50%)
+  .slides-pagination
+    a
+      border: 2px solid $light-grey
+      +border-radius(15px)
+      &.current
+        background-color: $grey
+      &:hover
+        background-color: $dark-blue

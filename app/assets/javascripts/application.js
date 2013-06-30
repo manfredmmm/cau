@@ -24,12 +24,11 @@ $(function () {
     "use strict";
 
     $('#slides').superslides({
-        play: false,
-        slide_speed: 'normal',
+        slide_speed: '800',
         slide_easing: 'linear',
         pagination: true,
-        hashchange: false,
-        scrollable: true
+        hashchange: true,
+        scrollable: false
         //classes:
         //    preserve: 'preserve',
         //    nav: 'slides-navigation',

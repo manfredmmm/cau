@@ -16,3 +16,7 @@
       = image_tag("p1.jpg")
       .container
         h3= "slide 3"
+  
+  nav.slides-navigation
+    = link_to raw("<i class='icon-chevron-sign-right'></i>"), "#", class: "next"
+    = link_to raw("<i class='icon-chevron-sign-left'></i>"), "#", class: "prev"
