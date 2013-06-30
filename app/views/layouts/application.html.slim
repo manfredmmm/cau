@@ -19,6 +19,6 @@ html
       = yield
     footer
       nav#social
-        = link_to "Correu", "#", target: "_blank", class: "last"
-        = link_to "Facebook", "#", target: "_blank"
-        = link_to "Twitter", "#", target: "_blank"
+        = link_to raw("<i class='icon-envelope'> Contacte</i>"), "#", target: "_blank", class: "last"
+        = link_to raw("<i class='icon-facebook-sign'> Facebook</i>"), "#", target: "_blank"
+        = link_to raw("<i class='icon-twitter-sign'> Twitter</i>"), "#", target: "_blank"

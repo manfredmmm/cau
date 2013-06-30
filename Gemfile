@@ -8,7 +8,7 @@ gem 'simple_form'
 gem 'inherited_resources'
 gem 'carrierwave'
 gem 'rmagick'
-gem 'font-awesome-sass-rails'
+gem "font-awesome-rails"
 gem 'inherited_resources'
 gem 'cocoon'
 
