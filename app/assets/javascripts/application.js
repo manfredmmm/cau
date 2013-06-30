@@ -19,13 +19,15 @@
 //= require jquery-1.7.2.min
 //= require lightbox
 //= require jquery.superslides.min
+//= require jquery.easing.1.3
+//= require jquery.animate-enhanced.min
 
 $(function () {
     "use strict";
 
     $('#slides').superslides({
-        slide_speed: '800',
-        slide_easing: 'linear',
+        slide_speed: '1200',
+        slide_easing: 'easeInOutCubic',
         pagination: true,
         hashchange: true,
         scrollable: false
