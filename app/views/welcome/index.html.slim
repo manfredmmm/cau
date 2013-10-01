@@ -29,7 +29,7 @@ section#cover
         - @installations.each do |installation|
           li
             a href="#{installation.image.url}" rel="lightbox[gallery]" title="#{installation.title}"
-              = image_tag(installation.image.thumb)
+              = image_tag(installation.image.little)
 
   section#contact
     h2= "On som i com ens podeu trobar"

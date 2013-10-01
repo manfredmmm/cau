@@ -43,7 +43,19 @@
   h2
     text-align: right
   ul
-    +inline-list
+    width: 100%
+    text-align: center
+    +inline-block-list
+    li
+      margin: 0 5px 10px 0
+      a
+        display: block
+        &:hover
+          img
+            border: 5px solid darken($light-grey, 25%)
+            +transition-duration(0.4s)
+      img
+        border: 5px solid $light-grey
 
 #contact
   margin-bottom: 60px
