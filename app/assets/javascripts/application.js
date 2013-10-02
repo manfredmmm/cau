@@ -44,15 +44,28 @@ $(function () {
         this.navigationEl = $('nav#menu');
         this.navigationEl.on("click", "a", $.proxy(this.chooseSection, this));
 
+        $('a.home img').hide();
         $('footer').hide();
+        $('a.top').hide();
         $(window).scroll(function () {
             if ($(window).scrollTop() < ($(this).height() - 56)) {
                 $('header').removeClass('fixed');
-                $('footer').hide();
+                $('footer').fadeOut();
+                $('a.home img').fadeOut();
+                $('a.top').fadeOut();
             } else {
                 $('header').addClass('fixed');
-                $('footer').show();
+                $('footer').fadeIn();
+                $('a.home img').fadeIn();
+                $('a.top').fadeIn();
             }
+        });
+
+        $('a.top').on('click', function (event) {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1250);
+            event.preventDefault();
         });
     };
 
