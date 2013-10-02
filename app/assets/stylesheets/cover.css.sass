@@ -2,27 +2,31 @@
 
 .title_cover
   position: absolute
-  top: 100px
-  left: 300px
+  top: 10%
+  left: 5%
   z-index: 9999
   h1, h2, h3
     font-family: "Aaa"
     text-rendering: optimizelegibility
     +text-shadow($black 1px 1px 5px, $grey 0 -1px 3px)
+    color: $white
   h1
     font-size: 60px
-    color: $white
     font-weight: bold
   h2
     font-size: 35px
-    color: $white
-  .container
-    position: absolute
-    h3
-      font-size: 22px
-      color: $white
 
 #slides
+  h3
+    text-rendering: optimizelegibility
+    +text-shadow($black 1px 1px 5px, $grey 0 -1px 3px)
+    color: $white
+    position: absolute
+    bottom: 10%
+    font-size: 18px
+    width: 97%
+    padding-right: 3%
+    text-align: right
   a.next, a.prev
     color: $white
     +text-shadow($black 1px 1px 5px)
