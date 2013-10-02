@@ -11,6 +11,7 @@ gem 'rmagick'
 gem "font-awesome-rails"
 gem 'inherited_resources'
 gem 'cocoon'
+gem 'animate-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

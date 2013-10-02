@@ -73,7 +73,10 @@ $(function () {
         var sectionId = $(event.currentTarget).attr('href');
         $('html, body').animate({
             scrollTop: ($(sectionId).offset().top - 116)
-        }, 1250);
+        }, 1250, function () {
+            $(sectionId).addClass('animated bounceInDown');
+        });
+        $(sectionId).removeClass('animated bounceInDown');
         event.preventDefault();
     };
 
