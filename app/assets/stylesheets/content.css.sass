@@ -68,6 +68,16 @@
   #info
     float: left
     width: 190px
-    p
+    text-align: right
+    li
+      padding-bottom: 10px
       margin-bottom: 10px
-      font-size: 17px
+      border-bottom: 1px solid $light-grey
+      &:first-child
+        border-top: 1px solid $light-grey
+        padding-top: 10px
+        margin-top: 10px
+      a
+        color: $blue
+        &:hover
+          text-decoration: underline

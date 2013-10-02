@@ -34,8 +34,15 @@ section#cover
   section#contact
     h2= "On som i com ens podeu trobar"
     = google_map
-    #info
-      p Carrer Vallfonollosa 11, principal
-      p Manresa 08241
-      p= "Horari: Dissabtes de 16h a 19h."
-      p= mail_to "cardenallluch@gmail.com", "Envia'ns un correu!", subject: "Contacte via web"
+    ul#info
+      li
+        p Direcció:
+        p Carrer Vallfonollosa 11, principal
+        p Manresa 08241
+      li= "Horari: Dissabtes de 16h a 19h."
+      li
+        p= "Vols venir al nostre cau?"
+        = link_to "Fer reserva", "https://docs.google.com/forms/d/1LyWJaVooClFbeC2KgxyEj4ARk3ztUMe2f3bZ4CJtYTc/viewform", target: "_blank"
+      li
+        p= "Vols saber més?"
+        = mail_to "cardenallluch@gmail.com", "Envia'ns un correu!", subject: "Contacte via web"
