@@ -3,28 +3,32 @@ section#cover
 
 #content
   section#news
-    h2= @news.title
-    p= @news.content
+    - unless @news.nil?
+      h2= @news.title
+      p= @news.content
 
   section#aboutus
-    h2= @aboutus.title
-    p= @aboutus.content unless @aboutus.image_url.blank?
-    = image_tag(@aboutus.image_url)
+    - unless @aboutus.nil?
+      h2= @aboutus.title
+      p= @aboutus.content unless @aboutus.image_url.blank?
+      = image_tag(@aboutus.image_url)
 
   section#units
-    h2= @units.title
-    = image_tag(@units.image_url) unless @units.image_url.blank?
-    p= @units.content
+    - unless @units.nil?
+      h2= @units.title
+      = image_tag(@units.image_url) unless @units.image_url.blank?
+      p= @units.content
 
   section#caps
-    h2= @caps.title
-    p= @caps.content
-    = image_tag(@caps.image_url) unless @caps.image_url.blank?
+    - unless @caps.nil?
+      h2= @caps.title
+      p= @caps.content
+      = image_tag(@caps.image_url) unless @caps.image_url.blank?
 
   section#gallery
     h2= "Les nostres instal·lacions"
 
-    - unless @installations.empty?
+    - unless @installations.nil?
       ul#installations
         - @installations.each do |installation|
           li
