@@ -73,12 +73,32 @@ $(function () {
         var sectionId = $(event.currentTarget).attr('href');
         $('html, body').animate({
             scrollTop: ($(sectionId).offset().top - 116)
-        }, 1250, function () {
-            $(sectionId).addClass('animated bounceInDown');
-        });
-        $(sectionId).removeClass('animated bounceInDown');
+        }, 1250);
         event.preventDefault();
     };
 
     window.menuController = new MenuController();
+
+    // Add class effects
+    $(window).scroll(function () {
+        console.log("scroll: " + $(window).scrollTop());
+        if ($(window).scrollTop() > 320) {
+            $('#news').addClass('animated bounceInDown');
+        }
+        if ($(window).scrollTop() > ) {
+            $('#aboutus').addClass('animated bounceInDown');
+        }
+        if ($(window).scrollTop() > ) {
+            $('#gallery').addClass('animated bounceInDown');
+        }
+        if ($(window).scrollTop() > ) {
+            $('#units').addClass('animated bounceInDown');
+        }
+         if ($(window).scrollTop() > ) {
+            $('#caps').addClass('animated bounceInDown');
+        }
+        if ($(window).scrollTop() > 2300) {
+            $('#contact').addClass('animated bounceInDown');
+        }
+    });
 });
