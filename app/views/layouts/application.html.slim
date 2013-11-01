@@ -19,7 +19,8 @@ html
       = yield
     = link_to raw("<i class='icon-chevron-up'></i>"), "#", class: "top"
     footer
-      nav#social
-        = link_to raw("<i class='icon-envelope'> Contacte</i>"), "#", target: "_blank", class: "last"
-        = link_to raw("<i class='icon-facebook-sign'> Facebook</i>"), "#", target: "_blank"
-        = link_to raw("<i class='icon-twitter-sign'> Twitter</i>"), "#", target: "_blank"
+      .footer_nav
+        nav#social
+          = link_to raw("<i class='fa fa-facebook-square'></i>"), "http://www.facebook.com/aeigcardenallluch", target: "_blank"
+          = link_to "Twitter", "http://www.twitter.com/cardenallluch", target: "_blank"
+          = mail_to "cardenallluch@gmail.com", "Contacta'ns", target: "_blank"
