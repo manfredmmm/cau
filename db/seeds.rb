@@ -24,6 +24,14 @@ caps.save!
 insta = Slideshow.find_or_create_by_name("installations")
 5.times do |i|
   slide = File.open(File.join(Rails.root, "app/assets/images/imatge-#{i}.jpg"))
-  insta.slides << slide
+  insta.slides << Slide.create(image: slide, title: "Foto instalacio #{i}")
   insta.save!
+end
+
+# Cover section
+cover = Slideshow.find_or_create_by_name("covers")
+3.times do |i|
+  slide = File.open(File.join(Rails.root, "app/assets/images/portada-#{i}.jpg"))
+  cover.slides << Slide.create(image: slide, title: "Foto portada #{i}")
+  cover.save!
 end

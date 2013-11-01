@@ -4,18 +4,11 @@
 
 #slides
   ul.slides-container
-    li
-      = image_tag("p1.jpg")
-      .container
-        h3= "slide 1"
-    li
-      = image_tag("p2.jpeg")
-      .container
-        h3= "slide 2"
-    li
-      = image_tag("p3.jpeg")
-      .container
-        h3= "slide 3"
+    - @covers.each do |cover|
+      li
+        = image_tag(cover.image_url, alt: cover.title, title: cover.title)
+        .container
+          h3= cover.title
   
   nav.slides-navigation
     = link_to raw("<i class='icon-chevron-sign-right'></i>"), "#", class: "next"
