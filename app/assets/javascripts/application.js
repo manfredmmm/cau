@@ -80,25 +80,25 @@ $(function () {
     window.menuController = new MenuController();
 
     // Add class effects
-    $(window).scroll(function () {
-        console.log("scroll: " + $(window).scrollTop());
-        if ($(window).scrollTop() > 320) {
-            $('#news').addClass('animated bounceInDown');
-        }
-        if ($(window).scrollTop() > ) {
-            $('#aboutus').addClass('animated bounceInDown');
-        }
-        if ($(window).scrollTop() > ) {
-            $('#gallery').addClass('animated bounceInDown');
-        }
-        if ($(window).scrollTop() > ) {
-            $('#units').addClass('animated bounceInDown');
-        }
-         if ($(window).scrollTop() > ) {
-            $('#caps').addClass('animated bounceInDown');
-        }
-        if ($(window).scrollTop() > 2300) {
-            $('#contact').addClass('animated bounceInDown');
-        }
-    });
+    //$(window).scroll(function () {
+    //    console.log("scroll: " + $(window).scrollTop());
+    //    if ($(window).scrollTop() > 320) {
+    //        $('#news').addClass('animated bounceInDown');
+    //    }
+    //    if ($(window).scrollTop() > ) {
+    //        $('#aboutus').addClass('animated bounceInDown');
+    //    }
+    //    if ($(window).scrollTop() > ) {
+    //        $('#gallery').addClass('animated bounceInDown');
+    //    }
+    //    if ($(window).scrollTop() > ) {
+    //        $('#units').addClass('animated bounceInDown');
+    //    }
+    //     if ($(window).scrollTop() > ) {
+    //        $('#caps').addClass('animated bounceInDown');
+    //    }
+    //    if ($(window).scrollTop() > 2300) {
+    //        $('#contact').addClass('animated bounceInDown');
+    //    }
+    //});
 });
