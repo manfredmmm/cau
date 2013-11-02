@@ -1,9 +1,10 @@
-@import "compass/reset"
-@import "common"
+@import compass
+@import variables
 
 body
-  font-family: $text, Helvetica, arial
-  font-size: 19px
+  font-family: $text
+  font-size: 14px
+  line-height: 1.5
   letter-spacing: 0.08em
   width: 100%
   margin: 0 auto
@@ -38,13 +39,14 @@ body
         padding: 0 10px
         &.last, &.home
           border: none
+        &:hover
+          color: $dark-blue
         &.home
           width: 35px
           height: 44px
           margin-right: 30px
           float: left
           padding: 0
-
         &.normal
           &:before, &:after
             display: inline-block
@@ -89,7 +91,6 @@ body
   #content
     width: 960px
     margin: 0 auto
-    margin-top: 120px
 
   footer
     border-top: 1px solid $light-grey

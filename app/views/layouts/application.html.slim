@@ -2,6 +2,8 @@ doctype html
 html
   head
     title AEiG Cardenal Lluch
+    link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'
+    link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -9,7 +11,7 @@ html
     header
       nav#menu
         = link_to image_tag("cardenallluch.png"), root_path, class: "home", title: "AEiG Cardenal Lluch"
-        = link_to @news.title, "#news", class: "normal" unless @news.blank?
+        = link_to "Notícies", "#news", class: "normal"
         = link_to @aboutus.title, "#aboutus", class: "normal" unless @aboutus.blank?
         = link_to @units.title, "#units", class: "normal" unless @units.blank?
         = link_to @caps.title, "#caps", class: "normal" unless @caps.blank?
@@ -21,6 +23,6 @@ html
     footer
       .footer_nav
         nav#social
-          = link_to raw("<i class='fa fa-facebook-square'></i>"), "http://www.facebook.com/aeigcardenallluch", target: "_blank"
+          = link_to "Facebook", "http://www.facebook.com/aeigcardenallluch", target: "_blank"
           = link_to "Twitter", "http://www.twitter.com/cardenallluch", target: "_blank"
           = mail_to "cardenallluch@gmail.com", "Contacta'ns", target: "_blank"

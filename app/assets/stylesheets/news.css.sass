@@ -1,0 +1,54 @@
+@import compass 
+@import variables
+
+#news
+  padding-bottom: 0
+  li.new
+    width: 380px
+    height: 400px
+    padding-bottom: 50px
+    float: left
+    &:nth-child(even)
+      margin-left: 98px
+    &:hover
+      img
+        +opacity(1)
+        +transition-duration(0.4s)
+      span.more
+        text-decoration: underline
+    a
+      display: block
+    img
+      +opacity(0.85)
+      +border-radius(2px)
+      border: 1px solid $light-grey
+      width: 100%
+      height: 258px
+      margin-bottom: 10px
+    h3.title
+      width: 100%
+      float: left
+      margin-bottom: 5px
+    p
+      width: 100%
+      float: left
+      color: $grey
+      margin-bottom: 5px
+    span.date
+      width: 25%
+      float: left
+      font-size: 11px
+      font-style: italic
+      line-height: 19px
+      font-family: $links
+      &:before
+        content: "["
+      &:after
+        content: "]"
+    span.more
+      float: left
+      width: 75%
+      font-size: 12px
+      font-style: italic
+      text-align: right
+      font-family: $links

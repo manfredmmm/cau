@@ -3,9 +3,16 @@ section#cover
 
 #content
   section#news
-    - unless @news.nil?
-      h2= @news.title
-      p= @news.content
+    h2= "Notícies"
+    ul
+      - 4.times do |new|
+        li.new
+          a href="#"
+            = image_tag("imatge-0.jpg")
+            h3.title= "Noticia #{new} - Els llops van de campaments"
+            p= truncate("lorem ipsum lorem ipsum lorem lorem lorem lorem lorem ipsum lorem ore lorem lorem lorem lorem lorem ipsum", length: 100)
+            span.date= "31/12/2013"
+            span.more= "llegir més >>"
 
   section#aboutus
     - unless @aboutus.nil?
@@ -48,5 +55,5 @@ section#cover
         p= "Vols venir al nostre cau?"
         = link_to "Fer reserva", "https://docs.google.com/forms/d/1LyWJaVooClFbeC2KgxyEj4ARk3ztUMe2f3bZ4CJtYTc/viewform", target: "_blank"
       li
-        p= "Vols saber més?"
+        p= "Necessites més informació?"
         = mail_to "cardenallluch@gmail.com", "Envia'ns un correu!", subject: "Contacte via web"
