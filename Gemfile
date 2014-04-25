@@ -11,6 +11,8 @@ gem "font-awesome-rails"
 gem 'inherited_resources'
 gem 'cocoon'
 gem 'animate-rails'
+gem 'capistrano', '2.13.5'
+gem 'capistrano-rbenv'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

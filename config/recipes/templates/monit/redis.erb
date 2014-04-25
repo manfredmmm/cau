@@ -1,0 +1,6 @@
+check process redis with pidfile /tmp/redis.pid
+  start program = "/usr/local/bin/redis-server /etc/redis.conf"
+  stop program  = "echo "SHUTDOWN" | /bin/nc localhost 6379"
+  if children > 250 then restart
+  if 5 restarts within 5 cycles then timeout
+

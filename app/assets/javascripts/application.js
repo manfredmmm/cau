@@ -6,7 +6,6 @@
 //= require jquery.superslides.min
 //= require jquery.easing.1.3
 //= require jquery.animate-enhanced.min
-//= require foundation
 //= require_tree .
 
 $(function () {
