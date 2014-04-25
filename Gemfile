@@ -18,7 +18,7 @@ group :assets do
   gem 'compass-rails'
   gem 'jquery-ui-rails'
   gem 'uglifier', '>= 1.0.3'
-  gem 'zurb-foundation'
+  gem 'foundation-rails'
 end
 
 group :development do
