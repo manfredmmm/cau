@@ -11,7 +11,7 @@
 $(function () {
     "use strict";
 
-    $(document).foundation();
+    //$(document).foundation();
 
     $('#slides').superslides({
         slide_speed: '1200',
