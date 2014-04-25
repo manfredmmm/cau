@@ -5,7 +5,6 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'slim-rails'
 gem 'simple_form'
-gem 'inherited_resources'
 gem 'carrierwave'
 gem 'rmagick'
 gem "font-awesome-rails"
@@ -19,6 +18,7 @@ group :assets do
   gem 'compass-rails'
   gem 'jquery-ui-rails'
   gem 'uglifier', '>= 1.0.3'
+  gem 'zurb-foundation'
 end
 
 group :development do

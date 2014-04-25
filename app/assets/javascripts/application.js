@@ -14,7 +14,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require foundation
 //= require cocoon
 //= require jquery-1.7.2.min
 //= require lightbox
@@ -25,17 +25,16 @@
 $(function () {
     "use strict";
 
+    //window.onload = function() {
+    //    $(document).foundation();
+    //};
+
     $('#slides').superslides({
         slide_speed: '1200',
         slide_easing: 'easeInOutCubic',
         pagination: true,
         hashchange: true,
         scrollable: false
-        //classes:
-        //    preserve: 'preserve',
-        //    nav: 'slides-navigation',
-        //    container: 'slides-container',
-        //    pagination: 'slides-pagination
     });
 
     var MenuController;
@@ -79,26 +78,4 @@ $(function () {
 
     window.menuController = new MenuController();
 
-    // Add class effects
-    //$(window).scroll(function () {
-    //    console.log("scroll: " + $(window).scrollTop());
-    //    if ($(window).scrollTop() > 320) {
-    //        $('#news').addClass('animated bounceInDown');
-    //    }
-    //    if ($(window).scrollTop() > ) {
-    //        $('#aboutus').addClass('animated bounceInDown');
-    //    }
-    //    if ($(window).scrollTop() > ) {
-    //        $('#gallery').addClass('animated bounceInDown');
-    //    }
-    //    if ($(window).scrollTop() > ) {
-    //        $('#units').addClass('animated bounceInDown');
-    //    }
-    //     if ($(window).scrollTop() > ) {
-    //        $('#caps').addClass('animated bounceInDown');
-    //    }
-    //    if ($(window).scrollTop() > 2300) {
-    //        $('#contact').addClass('animated bounceInDown');
-    //    }
-    //});
 });
