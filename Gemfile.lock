@@ -193,6 +193,7 @@ DEPENDENCIES
   inherited_resources
   jquery-rails
   jquery-ui-rails
+  net-ssh
   pg
   quiet_assets
   rails (= 3.2.12)

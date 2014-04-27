@@ -8,3 +8,21 @@ LOG:  autovacuum launcher shutting down
 LOG:  received smart shutdown request
 LOG:  shutting down
 LOG:  database system is shut down
+LOG:  database system was shut down at 2014-02-17 23:00:26 CET
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  database "cau_database" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2014-04-26 18:14:25 CEST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2014-04-27 09:55:08 CEST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
