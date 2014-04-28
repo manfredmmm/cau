@@ -20,7 +20,7 @@ set alert david@adverway.com
 set httpd port 2812
     allow adverway:"fumed24!ramp"
 
-check system web_<%= stage %>
+check system web_production
   if loadavg(5min) > 2 for 2 cycles then alert
   if memory > 75% for 2 cycles then alert
   if cpu(user) > 75% for 2 cycles then alert
