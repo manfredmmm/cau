@@ -42,6 +42,9 @@ set :scm, "git"
 set :repository, "git@github.com:manfredmmm/#{application}"
 set :branch, current_git_branch
 
+set :stages, %w(production)
+set :default_stage, "production"
+
 set :maintenance_template_path, File.expand_path("../recipes/templates/maintenance.html.erb", __FILE__)
 
 default_run_options[:shell] = '/bin/zsh'
@@ -52,7 +55,7 @@ namespace :deploy do
   namespace :assets do
     desc "Precompile assets on local machine and upload them to the server."
     task :precompile, roles: :web, except: {no_release: true} do
-      run_locally "bundle exec rake assets:precompile RAILS_ENV=#{stage}"
+      run_locally "bundle exec rake assets:precompile RAILS_ENV=production"
       find_servers_for_task(current_task).each do |server|
         run_locally "rsync -vr --exclude='.DS_Store' public/assets #{user}@#{server.host}:#{shared_path}/"
       end
