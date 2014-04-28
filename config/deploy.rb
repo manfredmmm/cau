@@ -30,7 +30,7 @@ set :default_environment, {
     'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 }
 set :bundle_flags, "--deployment --quiet --binstubs --shebang ruby"
-set :rbenv_ruby_version, "2.0.0-p451"
+set :rbenv_ruby_version, "2.0.0p353"
 
 set :user, "deployer"
 set :application, "cau"
