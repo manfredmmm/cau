@@ -22,7 +22,7 @@ def current_git_branch
   branch
 end
 
-server "188.226.212.25", :cau, :app, :db, primary: true
+server "188.226.212.25", :cau, :app, :db, :web, primary: true
 set :rails_env, "production"
 set :server_name, "manfredmmm"
 
