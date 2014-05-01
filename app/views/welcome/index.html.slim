@@ -13,25 +13,21 @@ section#cover
             p= truncate("lorem ipsum lorem ipsum lorem lorem lorem lorem lorem ipsum lorem ore lorem lorem lorem lorem lorem ipsum", length: 100)
             span.date= "31/12/2013"
             span.more= "llegir més >>"
-
   section#aboutus
     - unless @aboutus.nil?
       h2= @aboutus.title
-      p= @aboutus.content unless @aboutus.image_url.blank?
-      = image_tag(@aboutus.image_url)
-
+      .text= raw(@aboutus.content)
+      = image_tag(@aboutus.image_url) unless @aboutus.image_url.blank?
   section#units
     - unless @units.nil?
       h2= @units.title
       = image_tag(@units.image_url) unless @units.image_url.blank?
-      p= @units.content
-
+      .text= raw(@units.content)
   section#caps
     - unless @caps.nil?
       h2= @caps.title
-      p= @caps.content
+      .text= raw(@caps.content)
       = image_tag(@caps.image_url) unless @caps.image_url.blank?
-
   section#gallery
     h2= "Les nostres instal·lacions"
     - unless @installations.nil?
@@ -40,7 +36,6 @@ section#cover
           li
             a href="#{installation.image.url}" rel="lightbox[gallery]" title="#{installation.title}"
               = image_tag(installation.image.little.url, title: installation.title, alt: installation.title)
-
   section#contact
     h2= "On som i com ens podeu trobar"
     = google_map
