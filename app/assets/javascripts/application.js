@@ -15,9 +15,9 @@ $(function () {
     //$(document).foundation();
 
     $('#slides').superslides({
-        slide_speed: '1200',
+        slide_speed: '1000',
         slide_easing: 'easeInOutCubic',
-        pagination: true,
+        pagination: false,
         hashchange: true,
         scrollable: false
     });

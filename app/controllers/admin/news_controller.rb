@@ -1,5 +1,5 @@
 module Admin
-  class SectionsController < AuthorizeController
+  class NewsController < AuthorizeController
      inherit_resources
 
      def create
