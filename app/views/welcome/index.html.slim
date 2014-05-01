@@ -13,6 +13,16 @@ section#cover
             p= truncate("lorem ipsum lorem ipsum lorem lorem lorem lorem lorem ipsum lorem ore lorem lorem lorem lorem lorem ipsum", length: 100)
             span.date= "31/12/2013"
             span.more= "llegir més >>"
+    ul
+      - @news.each do |new|
+        li.new
+          a href="#"
+            = image_tag("imatge-0.jpg")
+            h3.title= new.title
+            p= truncate(new.content, length: 100)
+            span.date= new.created_at.strftime("%d/%m/%Y")
+            span.more= "llegir més >>"
+
   section#aboutus
     - unless @aboutus.nil?
       h2= @aboutus.title

@@ -1,4 +1,5 @@
 class Section < ActiveRecord::Base
+  validates :image, presence: true
   attr_accessible :name, :title, :content, :image
 
   validates :name, presence: true, uniqueness: true

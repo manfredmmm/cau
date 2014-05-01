@@ -1,0 +1,8 @@
+= simple_form_for [:admin, @new], validate: true do |f|
+  = f.input :title
+  = f.input :content, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Basic' } }
+  = f.input :image, as: :file, label: false
+
+  = f.submit
+
+= link_to "Tornar al índex", admin_root_path
