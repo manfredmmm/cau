@@ -26,3 +26,6 @@ LOG:  database system is shut down
 LOG:  database system was shut down at 2014-04-27 09:55:08 CEST
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
+LOG:  database system was shut down at 2014-04-27 23:16:49 CEST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
