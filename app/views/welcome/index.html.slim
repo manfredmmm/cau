@@ -5,21 +5,12 @@ section#cover
   section#news
     h2= "Notícies"
     ul
-      - 4.times do |new|
-        li.new
-          a href="#"
-            = image_tag("imatge-0.jpg")
-            h3.title= "Noticia #{new} - Els llops van de campaments"
-            p= truncate("lorem ipsum lorem ipsum lorem lorem lorem lorem lorem ipsum lorem ore lorem lorem lorem lorem lorem ipsum", length: 100)
-            span.date= "31/12/2013"
-            span.more= "llegir més >>"
-    ul
       - @news.each do |new|
         li.new
           a href="#"
             = image_tag("imatge-0.jpg")
             h3.title= new.title
-            p= truncate(new.content, length: 100)
+            .text= raw(truncate(new.content, length: 100))
             span.date= new.created_at.strftime("%d/%m/%Y")
             span.more= "llegir més >>"
 

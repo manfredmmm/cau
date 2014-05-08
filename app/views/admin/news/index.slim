@@ -1,8 +1,0 @@
-h1= "Llistat de noticies"
-
-- unless @news.nil?
-  ul#news
-    - @news.each do |new|
-      li= link_to new.title, edit_admin_new_path(new)
-
-p= link_to "Crear nova notícia", new_admin_news_path

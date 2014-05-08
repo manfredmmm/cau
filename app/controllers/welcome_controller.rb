@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @covers = Slideshow.find_by_name("covers").slides
-    @news = New.last(4)
+    @news = Reading.last(4)
     @aboutus = Section.find_by_name("aboutus")
     @units = Section.find_by_name("units")
     @caps = Section.find_by_name("caps")
