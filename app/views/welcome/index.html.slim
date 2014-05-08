@@ -8,7 +8,7 @@ section#cover
       - @news.each do |new|
         li.new
           a href="#"
-            = image_tag("imatge-0.jpg")
+            = image_tag(new.image_url)
             h3.title= new.title
             .text= raw(truncate(new.content, length: 100))
             span.date= new.created_at.strftime("%d/%m/%Y")
