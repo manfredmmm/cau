@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140501182734) do
+ActiveRecord::Schema.define(:version => 20140514195628) do
 
   create_table "readings", :force => true do |t|
     t.string   "title"
@@ -19,7 +19,10 @@ ActiveRecord::Schema.define(:version => 20140501182734) do
     t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug"
   end
+
+  add_index "readings", ["slug"], :name => "index_readings_on_slug", :unique => true
 
   create_table "sections", :force => true do |t|
     t.string   "name"

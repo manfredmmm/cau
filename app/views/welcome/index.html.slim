@@ -2,17 +2,18 @@ section#cover
   = render "cover"
 
 #content
-  section#news
-    h2= "Notícies"
-    ul
-      - @news.each do |new|
-        li.new
-          a href="#"
-            = image_tag(new.image_url)
-            h3.title= new.title
-            .text= raw(truncate(new.content, length: 100))
+  - unless @news.empty?
+    section#news
+      h2= "Notícies"
+      ul
+        - @news.each do |new|
+          li.new
+            .cover
+              = image_tag(new.image_url, title: new.title, alt: new.title)
+              h3.title= truncate(new.title, length: 30)
+            .text= raw(truncate(new.content, length: 175))
             span.date= new.created_at.strftime("%d/%m/%Y")
-            span.more= "llegir més >>"
+            = link_to "llegir més >>", noticia_path(new), class: "more"
 
   section#aboutus
     - unless @aboutus.nil?

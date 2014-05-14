@@ -1,5 +1,6 @@
 module Admin
   class ReadingsController < AuthorizeController
+    layout 'admin'
     inherit_resources
 
     def create

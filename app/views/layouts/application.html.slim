@@ -13,7 +13,7 @@ html
     header
       nav#menu
         = link_to image_tag("cardenallluch.png"), root_path, class: "home", title: "AEiG Cardenal Lluch"
-        = link_to "Notícies", "#news", class: "normal"
+        = link_to "Notícies", "#news", class: "normal" unless @news.nil?
         = link_to @aboutus.title, "#aboutus", class: "normal" unless @aboutus.blank?
         = link_to @units.title, "#units", class: "normal" unless @units.blank?
         = link_to @caps.title, "#caps", class: "normal" unless @caps.blank?

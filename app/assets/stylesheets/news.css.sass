@@ -4,47 +4,58 @@
 #news
   padding-bottom: 0
   li.new
-    width: 380px
-    padding-bottom: 50px
+    width: 32.5%
+    padding-bottom: 30px
     float: left
     &:nth-child(even)
-      margin-left: 98px
+      margin: 0 10px
     &:hover
       img
         +opacity(1)
         +transition-duration(0.4s)
-      span.more
+        +scale(1.1)
+      a.more
         text-decoration: underline
-    a
-      display: block
-    img
-      +opacity(0.85)
-      +border-radius(2px)
+    .cover
       width: 100%
+      max-height: 279px
+      overflow: hidden
+      position: relative
       margin-bottom: 10px
-    h3.title
-      width: 100%
-      float: left
-      margin-bottom: 5px
+      img
+        +opacity(0.85)
+        +border-radius(2px)
+        width: 100%
+      h3.title
+        width: 90%
+        padding: 5%
+        bottom: 0
+        position: absolute
+        text-align: center
+        color: $white
+        background: rgba($grey, .5)
     p
       width: 100%
       float: left
       color: $grey
       margin-bottom: 5px
+      min-height: 105px
     span.date
       width: 25%
       float: left
       font-size: 11px
-      line-height: 19px
+      line-height: 18px
       font-family: $links
       &:before
         content: "["
       &:after
         content: "]"
-    span.more
+    a.more
       float: left
       width: 75%
       font-size: 12px
-      font-style: italic
       text-align: right
       font-family: $links
+      color: $black
+      &:hover
+        text-decoration: underline
