@@ -1,5 +1,5 @@
-h1= @new.title
-
-= image_tag(@new.image_url)
-
-.text= raw(@new.content)
+section#reading
+  h1= @new.title
+  .slides
+    = image_tag(@new.image_url)
+  .text= raw(@new.content)
