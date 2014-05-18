@@ -8,7 +8,7 @@ development:
 
 production:
   adapter: postgresql
-  database: database_name
+  database: cau_database
   host: localhost
   username: 
   pool: 5
