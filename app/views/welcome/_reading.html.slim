@@ -1,0 +1,6 @@
+.cover
+  = image_tag(new.image.reading.url, title: new.title, alt: new.title)
+  h3.title= truncate(new.title, length: 30)
+.text= raw(truncate(new.content, length: 175))
+span.date= new.created_at.strftime("%d/%m/%Y")
+= link_to "llegir més >>", noticia_path(new), class: "more"
