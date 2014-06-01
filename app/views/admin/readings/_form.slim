@@ -2,10 +2,11 @@
   .small-3.columns.left-menu
     = link_to "Tornar", admin_readings_path, class: "button radius"
 
-  .small-offset-2.small-7.columns
+  .small-offset-1.small-8.columns
+    h1= "Formulari d'una notícia:"
     = simple_form_for [:admin, @reading], validate: true do |f|
       = f.input :title
-      - unless @reading.image.nil?
+      - unless @reading.image.blank?
         = image_tag(@reading.image.reading.url)
       = f.input :image, as: :file, label: false
       = f.input :content, as: :ckeditor, label: false, input_html: { ckeditor: { toolbar: 'Basic' } }

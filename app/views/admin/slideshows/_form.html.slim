@@ -2,7 +2,7 @@
   .small-3.columns.left-menu
     = link_to "Tornar", admin_slideshows_path, class: "button radius"
 
-  .small-offset-2.small-7.columns
+  .small-offset-1.small-8.columns
     h1= "Llistat de fotografies"
     = simple_form_for [:admin, @slideshow], validate: true do |f|
       = f.input :name, as: :hidden
@@ -13,4 +13,4 @@
         .links
           = link_to_add_association 'Afegir foto', f, :slides, class: "button radius"
 
-      = f.submit, class: "button radius"
+      = f.submit class: "button radius"

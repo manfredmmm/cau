@@ -1,11 +1,14 @@
-= simple_form_for [:admin, @section], validate: true do |f|
-  = f.input :name, disabled: true
-  = f.input :title
-  = f.input :content, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Basic' } }
-  - unless @section.image.blank?
-    = image_tag(@section.image)
-  = f.input :image, as: :file, label: false
+.row
+  .small-3.columns.left-menu
+    = link_to "Tornar", admin_sections_path, class: "button radius"
 
-  = f.submit
-
-= link_to "Tornar al índex", admin_root_path
+  .small-offset-1.small-8.columns
+    h1= "Formulari d'una secció:"
+    = simple_form_for [:admin, @section], validate: true do |f|
+      = f.input :name, as: :hidden
+      = f.input :title
+      - unless @section.image.blank?
+        = image_tag(@section.image)
+      = f.input :image, as: :file, label: false
+      = f.input :content, label: false, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Basic' } }
+      = f.submit class: "button radius"

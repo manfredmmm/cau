@@ -1,8 +1,12 @@
-h1= "Escull el contingut de la secció que vols canviar:"
+.row
+  .small-3.columns.left-menu
+    //= link_to "Crear nova secció", new_admin_section_path, class: "button radius"
+    = link_to "Tornar", admin_root_path, class: "button radius"
 
-- unless @sections.nil?
-  ul#sections
-    - @sections.each do |section|
-      li= link_to section.title, edit_admin_section_path(section)
+  .small-offset-1.small-8.columns
+    h1= "Escull el contingut de la secció que vols canviar:"
+    - unless @sections.nil?
+      ul#sections
+        - @sections.each do |section|
+          li= link_to section.title, edit_admin_section_path(section)
 
-p= link_to "Crear nova secció", new_admin_section_path
