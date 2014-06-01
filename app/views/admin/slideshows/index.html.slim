@@ -1,9 +1,11 @@
-h1= "Canvia els fotos dels slideshows:"
+.row
+  .small-3.columns.left-menu
+    //= link_to "Crear slideshow", new_admin_slideshow_path, class: "button radius"
+    = link_to "Tornar", admin_root_path, class: "button radius"
 
-- unless @slideshows.nil?
-  ul
-    - @slideshows.each do |slideshow|
-      li= link_to slideshow.name, edit_admin_slideshow_path(slideshow)
+  .small-offset-2.small-7.columns
+    h1= "Gestiona les fotogràfies:"
 
-p= link_to "Crear slideshow", new_admin_slideshow_path
-p= link_to "Tornar"
+    ul
+      li= link_to "Fotogràfies de la capçalera", edit_admin_slideshow_path(id: 2)
+      li= link_to "Secció d'imatges de les instal·lacions del cau:", edit_admin_slideshow_path(id: 1)

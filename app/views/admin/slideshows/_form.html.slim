@@ -1,11 +1,16 @@
-= simple_form_for [:admin, @slideshow], validate: true do |f|
-  = f.input :name
+.row
+  .small-3.columns.left-menu
+    = link_to "Tornar", admin_slideshows_path, class: "button radius"
 
-  h3 Fotos
-  #slides
-    = f.simple_fields_for :slides do |slide|
-      = render 'slide_fields', :f => slide
-    .links
-      = link_to_add_association 'Afegir foto', f, :slides
+  .small-offset-2.small-7.columns
+    h1= "Llistat de fotografies"
+    = simple_form_for [:admin, @slideshow], validate: true do |f|
+      = f.input :name, as: :hidden
 
-  = f.submit
+      #slides
+        = f.simple_fields_for :slides do |slide|
+          = render 'slide_fields', :f => slide
+        .links
+          = link_to_add_association 'Afegir foto', f, :slides, class: "button radius"
+
+      = f.submit, class: "button radius"

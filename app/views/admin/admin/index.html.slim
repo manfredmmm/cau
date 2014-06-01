@@ -1,7 +1,10 @@
-h1= "Benvingut a l'administració, escull què vols modificar:"
+.row
+  .small-3.columns.left-menu
+    = link_to "Sortir de l'administració", root_path, class: "logout button radius"
 
-h2= link_to "Notícies", admin_readings_path
-h2= link_to "Seccions", admin_sections_path
-h2= link_to "Slideshows", admin_slideshows_path
-
-= link_to "Sortir de l'administració", root_path
+  .small-offset-2.small-7.columns
+      h1= "Benvingut a l'administració, escull què vols modificar:"
+      ul.menu
+        li= link_to "Imatges", admin_slideshows_path
+        li= link_to "Notícies", admin_readings_path
+        li= link_to "Seccions de contingut", admin_sections_path

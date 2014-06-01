@@ -1,10 +1,12 @@
-= simple_form_for [:admin, @reading], validate: true do |f|
-  = f.input :title
-  = f.input :content, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Basic' } }
-  - unless @reading.image.nil?
-    = image_tag(@reading.image.reading.url)
-  = f.input :image, as: :file, label: false
+.row
+  .small-3.columns.left-menu
+    = link_to "Tornar", admin_readings_path, class: "button radius"
 
-  = f.submit
-
-= link_to "Tornar al índex", admin_root_path
+  .small-offset-2.small-7.columns
+    = simple_form_for [:admin, @reading], validate: true do |f|
+      = f.input :title
+      - unless @reading.image.nil?
+        = image_tag(@reading.image.reading.url)
+      = f.input :image, as: :file, label: false
+      = f.input :content, as: :ckeditor, label: false, input_html: { ckeditor: { toolbar: 'Basic' } }
+      = f.submit class: "button radius"

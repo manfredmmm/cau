@@ -1,8 +1,12 @@
-h1= "Llistat de noticies"
+.row
+  .small-3.columns.left-menu
+    = link_to "Crear nova notícia", new_admin_reading_path, class: "button radius"
+    = link_to "Tornar", admin_root_path, class: "button radius"
 
-- unless @readings.nil?
-  ul#readings
-    - @readings.each do |new|
-      li= link_to new.title, edit_admin_reading_path(new)
+  .small-offset-2.small-7.columns
+    h1= "Llistat de notícies:"
 
-p= link_to "Crear nova notícia", new_admin_reading_path
+    - unless @readings.nil?
+      ul#readings
+        - @readings.each do |new|
+          li= link_to "#{new.title} [dia: #{new.updated_at.strftime('%d/%m/%Y - %H:%Mh')}]", edit_admin_reading_path(new)
