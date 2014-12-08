@@ -1,22 +1,22 @@
 section#cover
   = render "cover"
 
-section.content.left
+section.content.left#aboutus
   - unless @aboutus.nil?
     h2= @aboutus.title
     .text= raw(@aboutus.content)
     = image_tag(@aboutus.image_url, class: "image") unless @aboutus.image_url.blank?
-section.content.right
+section.content.right#units
   - unless @units.nil?
     h2= @units.title
     = image_tag(@units.image_url, class: "image") unless @units.image_url.blank?
     .text= raw(@units.content)
-section.content.left
+section.content.left#caps
   - unless @caps.nil?
     h2= @caps.title
     .text= raw(@caps.content)
     = image_tag(@caps.image_url, class: "image") unless @caps.image_url.blank?
-section.content.right
+section.content.right#history
   - unless @history.nil?
     h2= @history.title
     .text= raw(@history.content)

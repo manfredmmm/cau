@@ -1,12 +1,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require cocoon
-//= require jquery-1.7.2.min
+//= require jquery/jquery.min
 //= require lightbox
 //= require jquery.superslides.min
 //= require jquery.easing.1.3
 //= require jquery.animate-enhanced.min
 //= require ckeditor/init
+//= require jquery-dropdown/jquery.dropdown.min
 //= require_tree .
 
 $(function () {

@@ -12,17 +12,18 @@ html
       nav#menu
         ul
           li= link_to image_tag("cardenallluch.png"), root_path, class: "home", title: "AEiG Cardenal Lluch"
-          li= link_to raw("Cardenal Lluch <i class='icon-angle-down'></i>"), "#"
-          // submenu
-          //li= link_to @aboutus.title, "#aboutus" unless @aboutus.blank?
-          //li= link_to @units.title, "#units" unless @units.blank?
-          //li= link_to @caps.title, "#caps" unless @caps.blank?
-          //li= link_to @history.title, "#history" unless @history.blank?
+          li= link_to raw("Cardenal Lluch <i class='icon-angle-down'></i>"), "#aboutus", :'data-dropdown' => '#dropdown-1'
           li= link_to "Notícies", "#news" unless @news.nil?
           li= link_to "Galeria", "#gallery"
           li= link_to @sleep.title, "#sleep" unless @sleep.blank?
           li= link_to @signin.title, "#signin" unless @signin.blank?
           li= link_to "Contacte", "#contact"
+    div id="dropdown-1" class="dropdown dropdown-tip"
+      ul class="dropdown-menu"
+        li= link_to @aboutus.title, "#aboutus" unless @aboutus.blank?
+        li= link_to @units.title, "#units" unless @units.blank?
+        li= link_to @caps.title, "#caps" unless @caps.blank?
+        li= link_to @history.title, "#history" unless @history.blank?
     = yield
     = link_to raw("<i class='icon-chevron-up'></i>"), "#", class: "top"
     //footer
