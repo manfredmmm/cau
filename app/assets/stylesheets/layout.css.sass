@@ -1,15 +1,12 @@
-@import compass
-@import variables
-
-body.content
+body
   font-family: $text
-  font-size: 14px
+  font-size: 16px
   line-height: 1.5
   background: image-url('background.png')
   
   header
     +box-shadow($light-grey 0 0 20px)
-    height: 55px
+    height: 40px
     width: 100%
     z-index: 9999
     background-color: $white
@@ -22,27 +19,25 @@ body.content
     nav#menu
       width: 960px
       margin: 0 auto
-      font-size: 16px
+      font-size: .9em
       font-family: $title
-      line-height: 60px
-      img
-        margin-top: 5px
-        width: 35px
-        height: 44px
-        float: left
+      height: 40px
+      line-height: 40px
+      ul
+        +inline-block-list
       a
-        padding: 0 10px
-        &.last, &.home
-          border: none
-        &:hover
-          color: $dark-blue
         &.home
-          width: 35px
-          height: 44px
-          margin-right: 100px
+          width: 31px
+          margin-right: 50px
           float: left
-          padding: 0
-        &.normal
+          img
+            height: 35px
+        &:not(.home)
+          padding: 0 12px
+          &:last-child
+            border: none
+          &:hover
+            color: $dark-blue
           &:before, &:after
             display: inline-block
             opacity: 0
@@ -82,10 +77,6 @@ body.content
     font-size: 16px
     &:hover
       background-color: darken($light-grey, 25%)
-
-  #content
-    width: 960px
-    margin: 0 auto
 
   footer
     +box-shadow($light-grey 0 0 20px)

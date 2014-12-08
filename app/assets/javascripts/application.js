@@ -32,7 +32,7 @@ $(function () {
         $('footer').hide();
         $('a.top').hide();
         $(window).scroll(function () {
-            if ($(window).scrollTop() < ($(this).height() - 56)) {
+            if ($(window).scrollTop() < ($(this).height() - 30)) {
                 $('header').removeClass('fixed');
                 $('footer').fadeOut();
                 $('a.home img').fadeOut();

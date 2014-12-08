@@ -1,50 +1,64 @@
 section#cover
   = render "cover"
 
-#content
-  - unless @news.empty?
-    section#news
-      h2= "Notícies"
-      ul
-        - @news.each_with_index do |new, index|
-          li.new class=('mid' if (index == 1 || index == 4))
-            = render "reading", new: new
-  section#aboutus
-    - unless @aboutus.nil?
-      h2= @aboutus.title
-      .text= raw(@aboutus.content)
-      = image_tag(@aboutus.image_url) unless @aboutus.image_url.blank?
-  section#units
-    - unless @units.nil?
-      h2= @units.title
-      = image_tag(@units.image_url) unless @units.image_url.blank?
-      .text= raw(@units.content)
-  section#caps
-    - unless @caps.nil?
-      h2= @caps.title
-      .text= raw(@caps.content)
-      = image_tag(@caps.image_url) unless @caps.image_url.blank?
-  section#gallery
-    h2= "Les nostres instal·lacions"
-    - unless @installations.nil?
-      ul#installations
-        - @installations.each do |installation|
-          li
-            a href="#{installation.image.url}" rel="lightbox[gallery]" title="#{installation.title}"
-              = image_tag(installation.image.little.url, title: installation.title, alt: installation.title)
-  section#contact
-    h2= "On som i com ens podeu trobar"
-    = google_map
-    ul#info
-      li
-        p= "Direcció:"
-        p.info= "Carrer Vallfonollosa 11, principal - Manresa 08241"
-      li
-        p= "Horari:"
-        p.info= "Dissabtes de 16h a 19h"
-      li
-        p= "Vols venir al nostre cau?"
-        = link_to "Fer reserva", "https://docs.google.com/forms/d/1LyWJaVooClFbeC2KgxyEj4ARk3ztUMe2f3bZ4CJtYTc/viewform", target: "_blank"
-      li
-        p= "Necessites més informació?"
-        = mail_to "cardenallluch@gmail.com", "Envia'ns un correu!", subject: "Contacte via web"
+section.content.left
+  - unless @aboutus.nil?
+    h2= @aboutus.title
+    .text= raw(@aboutus.content)
+    = image_tag(@aboutus.image_url, class: "image") unless @aboutus.image_url.blank?
+section.content.right
+  - unless @units.nil?
+    h2= @units.title
+    = image_tag(@units.image_url, class: "image") unless @units.image_url.blank?
+    .text= raw(@units.content)
+section.content.left
+  - unless @caps.nil?
+    h2= @caps.title
+    .text= raw(@caps.content)
+    = image_tag(@caps.image_url, class: "image") unless @caps.image_url.blank?
+section.content.right
+  - unless @history.nil?
+    h2= @history.title
+    .text= raw(@history.content)
+    = image_tag(@history.image_url, class: "image") unless @history.image_url.blank?
+- unless @news.empty?
+  section#news.content
+    h2= "Notícies"
+    ul
+      - @news.each_with_index do |new, index|
+        li.new class=('mid' if (index == 1 || index == 4))
+          = render "reading", new: new
+section#gallery.content
+  h2= "Les nostres instal·lacions"
+  - unless @installations.nil?
+    ul#installations
+      - @installations.each do |installation|
+        li
+          a href="#{installation.image.url}" rel="lightbox[gallery]" title="#{installation.title}"
+            = image_tag(installation.image.little.url, title: installation.title, alt: installation.title)
+section#sleep.content.left
+  - unless @sleep.nil?
+    h2= @sleep.title
+    .text= raw(@sleep.content)
+    = image_tag(@sleep.image_url, class: "image") unless @sleep.image_url.blank?
+section#signin.content.right
+  - unless @signin.nil?
+    h2= @signin.title
+    .text= raw(@signin.content)
+    = image_tag(@signin.image_url, class: "image") unless @signin.image_url.blank?
+section#contact.content
+  h2= "On som i com ens podeu trobar"
+  = google_map
+  ul#info
+    li
+      p= "Direcció:"
+      p.info= "Carrer Vallfonollosa 11, principal - Manresa 08241"
+    li
+      p= "Horari:"
+      p.info= "Dissabtes de 16h a 19h"
+    li
+      p= "Vols venir al nostre cau?"
+      = link_to "Fer reserva", "https://docs.google.com/forms/d/1LyWJaVooClFbeC2KgxyEj4ARk3ztUMe2f3bZ4CJtYTc/viewform", target: "_blank"
+    li
+      p= "Necessites més informació?"
+      = mail_to "cardenallluch@gmail.com", "Envia'ns un correu!", subject: "Contacte via web"

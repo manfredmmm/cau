@@ -4,25 +4,28 @@ html
     title AEiG Cardenal Lluch
     link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'
     link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'
-    //meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
-    //= javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
-  body.content
+  body
     header
       nav#menu
-        = link_to image_tag("cardenallluch.png"), root_path, class: "home", title: "AEiG Cardenal Lluch"
-        = link_to "Notícies", "#news", class: "normal" unless @news.nil?
-        = link_to @aboutus.title, "#aboutus", class: "normal" unless @aboutus.blank?
-        = link_to @units.title, "#units", class: "normal" unless @units.blank?
-        = link_to @caps.title, "#caps", class: "normal" unless @caps.blank?
-        = link_to "Galeria", "#gallery", class: "normal"
-        = link_to "Contacte", "#contact", class: "last normal"
-    section.content
-      = yield
+        ul
+          li= link_to image_tag("cardenallluch.png"), root_path, class: "home", title: "AEiG Cardenal Lluch"
+          li= link_to raw("Cardenal Lluch <i class='icon-angle-down'></i>"), "#"
+          // submenu
+          //li= link_to @aboutus.title, "#aboutus" unless @aboutus.blank?
+          //li= link_to @units.title, "#units" unless @units.blank?
+          //li= link_to @caps.title, "#caps" unless @caps.blank?
+          //li= link_to @history.title, "#history" unless @history.blank?
+          li= link_to "Notícies", "#news" unless @news.nil?
+          li= link_to "Galeria", "#gallery"
+          li= link_to @sleep.title, "#sleep" unless @sleep.blank?
+          li= link_to @signin.title, "#signin" unless @signin.blank?
+          li= link_to "Contacte", "#contact"
+    = yield
     = link_to raw("<i class='icon-chevron-up'></i>"), "#", class: "top"
-    footer
+    //footer
       .footer_nav
         nav#social
           = link_to "Facebook", "http://www.facebook.com/aeigcardenallluch", target: "_blank"
