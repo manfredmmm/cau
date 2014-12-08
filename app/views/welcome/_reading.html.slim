@@ -1,4 +1,4 @@
-.cover
+a.cover href="#{noticia_path(new)}"
   = image_tag(new.image.reading.url, title: new.title, alt: new.title)
   h3.title= truncate(new.title, length: 30)
 .text= raw(truncate(new.content, length: 175))

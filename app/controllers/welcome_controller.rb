@@ -5,6 +5,9 @@ class WelcomeController < ApplicationController
     @aboutus = Section.find_by_name("aboutus")
     @units = Section.find_by_name("units")
     @caps = Section.find_by_name("caps")
+    @sleep = Section.find_by_name("sleep")
+    @signin = Section.find_by_name("signin")
+    @history = Section.find_by_name("history")
     @installations = Slideshow.find_by_name("installations").slides
   end
 

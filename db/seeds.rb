@@ -22,6 +22,21 @@ caps = Section.find_or_create_by_name("caps", title: "Caps i aquel·les?", conte
 caps.image = File.open(File.join(Rails.root, 'app/assets/images/units.png'))
 caps.save!
 
+# Sleep
+sleep = Section.find_or_create_by_name("sleep", title: "Dormir al cau", content: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+sleep.image = File.open(File.join(Rails.root, 'app/assets/images/units.png'))
+sleep.save!
+
+# Signin
+signin = Section.find_or_create_by_name("signin", title: "Vull apuntar-m'hi!", content: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+signin.image = File.open(File.join(Rails.root, 'app/assets/images/units.png'))
+signin.save!
+
+# History
+history = Section.find_or_create_by_name("history", title: "Caps i aquel·les?", content: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+history.image = File.open(File.join(Rails.root, 'app/assets/images/units.png'))
+history.save!
+
 # Installations section
 insta = Slideshow.find_or_create_by_name("installations")
 5.times do |i|

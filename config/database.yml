@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   database: cau_database
   host: localhost
-  username: 
+  username:
   pool: 5
   timeout: 5000
 
