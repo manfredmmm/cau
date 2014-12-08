@@ -9,8 +9,8 @@ section.content.left#aboutus
 section.content.right#units
   - unless @units.nil?
     h2= @units.title
-    = image_tag(@units.image_url, class: "image") unless @units.image_url.blank?
     .text= raw(@units.content)
+    = image_tag(@units.image_url, class: "image") unless @units.image_url.blank?
 section.content.left#caps
   - unless @caps.nil?
     h2= @caps.title
@@ -19,8 +19,8 @@ section.content.left#caps
 section.content.right#history
   - unless @history.nil?
     h2= @history.title
-    .text= raw(@history.content)
     = image_tag(@history.image_url, class: "image") unless @history.image_url.blank?
+    .text= raw(@history.content)
 - unless @news.empty?
   section#news.content
     h2= "Notícies"
@@ -44,8 +44,8 @@ section#sleep.content.left
 section#signin.content.right
   - unless @signin.nil?
     h2= @signin.title
-    .text= raw(@signin.content)
     = image_tag(@signin.image_url, class: "image") unless @signin.image_url.blank?
+    .text= raw(@signin.content)
 section#contact.content
   h2= "On som i com ens podeu trobar"
   = google_map
