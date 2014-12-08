@@ -27,20 +27,17 @@ $(function () {
 
     MenuController = function () {
         this.navigationEl = $('nav#menu');
-        this.navigationEl.on("click", "a", $.proxy(this.chooseSection, this));
+        this.navigationEl.on("click", "a:not(.submenu)", $.proxy(this.chooseSection, this));
 
         $('a.home img').hide();
-        $('footer').hide();
         $('a.top').hide();
         $(window).scroll(function () {
             if ($(window).scrollTop() < ($(this).height() - 30)) {
                 $('header').removeClass('fixed');
-                $('footer').fadeOut();
                 $('a.home img').fadeOut();
                 $('a.top').fadeOut();
             } else {
                 $('header').addClass('fixed');
-                $('footer').fadeIn();
                 $('a.home img').fadeIn();
                 $('a.top').fadeIn();
             }
@@ -49,7 +46,7 @@ $(function () {
         $('a.top').on('click', function (event) {
             $('html, body').animate({
                 scrollTop: 0
-            }, 1250);
+            }, 1000);
             event.preventDefault();
         });
     };
@@ -57,10 +54,20 @@ $(function () {
     MenuController.prototype.chooseSection  = function (event) {
         var sectionId = $(event.currentTarget).attr('href');
         $('html, body').animate({
-            scrollTop: ($(sectionId).offset().top - 116)
-        }, 1250);
+            scrollTop: ($(sectionId).offset().top - 50)
+        }, 1000);
         event.preventDefault();
     };
+
+    $('ul.dropdown-menu a').on('click', function (e) {
+        var sectionId = $(this).attr('href');
+
+        $('html, body').animate({
+            scrollTop: ($(sectionId).offset().top - 50)
+        }, 1000);
+
+        e.preventDefault();
+    });
 
     window.menuController = new MenuController();
 });

@@ -12,7 +12,7 @@ html
       nav#menu
         ul
           li= link_to image_tag("cardenallluch.png"), root_path, class: "home", title: "AEiG Cardenal Lluch"
-          li= link_to raw("Cardenal Lluch <i class='icon-angle-down'></i>"), "#aboutus", :'data-dropdown' => '#dropdown-1'
+          li= link_to raw("Cardenal Lluch <i class='icon-angle-down'></i>"), "#aboutus", :'data-dropdown' => '#dropdown-1', class: "submenu"
           li= link_to "Notícies", "#news" unless @news.nil?
           li= link_to "Galeria", "#gallery"
           li= link_to @sleep.title, "#sleep" unless @sleep.blank?
@@ -26,9 +26,3 @@ html
         li= link_to @history.title, "#history" unless @history.blank?
     = yield
     = link_to raw("<i class='icon-chevron-up'></i>"), "#", class: "top"
-    //footer
-      .footer_nav
-        nav#social
-          = link_to "Facebook", "http://www.facebook.com/aeigcardenallluch", target: "_blank"
-          = link_to "Twitter", "http://www.twitter.com/cardenallluch", target: "_blank"
-          = mail_to "cardenallluch@gmail.com", "Contacta'ns", target: "_blank"
