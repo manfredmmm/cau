@@ -26,8 +26,9 @@
   padding-bottom: 0
   li.new
     width: 32.5%
-    padding-bottom: 30px
+    height: 475px
     float: left
+    position: relative
     &.mid
       margin: 0 10px
     &:hover
@@ -63,21 +64,22 @@
       margin-bottom: 5px
       min-height: 105px
     span.date
-      width: 25%
-      float: left
-      font-size: 11px
+      font-size: 13px
       line-height: 18px
       font-family: $links
+      bottom: 30px
+      position: absolute
+      left: 0
       &:before
         content: "["
       &:after
         content: "]"
     a.more
-      float: left
-      width: 75%
-      font-size: 12px
-      text-align: right
+      font-size: 14px
       font-family: $links
       color: $black
+      bottom: 30px
+      position: absolute
+      right: 0
       &:hover
         text-decoration: underline
