@@ -9,5 +9,9 @@ module Admin
     def update
       update! { admin_root_path }
     end
+
+    def destroy
+      destroy! { admin_root_path }
+    end
   end
 end

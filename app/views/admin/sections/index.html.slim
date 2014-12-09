@@ -8,5 +8,7 @@
     - unless @sections.nil?
       ul#sections
         - @sections.each do |section|
-          li= link_to section.title, edit_admin_section_path(section)
+          li
+            = link_to section.title, edit_admin_section_path(section)
+            = link_to "Delete", admin_section_path(section), method: :delete, confirm: "Estàs segur?"
 
