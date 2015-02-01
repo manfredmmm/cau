@@ -3,7 +3,7 @@ class Slide < ActiveRecord::Base
 
   belongs_to :slideshow
 
-  validates :image, presence: true
+  validates :image, presence: true, on: :create
   validates :title, presence: true
 
   mount_uploader :image, SlideUploader

@@ -1,5 +1,5 @@
 module Admin
-  class SlideshowsController < AuthorizeController
+  class SlidesController < AuthorizeController
     layout 'admin'
     inherit_resources
   end

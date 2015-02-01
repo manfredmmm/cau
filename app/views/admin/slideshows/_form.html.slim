@@ -11,6 +11,5 @@
         = f.simple_fields_for :slides do |slide|
           = render 'slide_fields', :f => slide
         .links
-          = link_to_add_association 'Afegir foto', f, :slides, class: "button radius"
-
-      = f.submit class: "button radius"
+          = link_to_add_association 'Afegir foto', f, :slides, class: "button radius left"
+          = f.submit class: "button radius right"

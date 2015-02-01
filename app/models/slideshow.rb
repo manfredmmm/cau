@@ -4,5 +4,5 @@ class Slideshow < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
 
   has_many :slides, dependent: :destroy
-  accepts_nested_attributes_for :slides
+  accepts_nested_attributes_for :slides, allow_destroy: true
 end
