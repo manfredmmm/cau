@@ -12,11 +12,15 @@
   em
     font-style: italic
   ul
-    list-style-type: square
+    list-style-type: circle
     margin-left: 20px
+    margin-bottom: 10px
+    li
+      margin-bottom: 5px
   ol
     list-style-type: decimal
     margin-left: 20px
+    margin-bottom: 5px
 
 // Sections style
 .content
@@ -30,24 +34,25 @@
   border: 1px solid $light-grey
   margin-top: 30px
   padding: 20px 40px
+  p
+    display: block
+    margin-bottom: 15px
   img.image
     float: left
+    clear: left
     width: 384px
-  .text
-    float: left
-    width: 464px
-  &.left
-    img
-      margin-left: 15px
-    .text
-      margin-right: 15px
+    height: 318px
+    margin: 0 30px 30px 0
   &.right
     h2
       text-align: right
-    img
-      margin-right: 15px
-    .text
-      margin-left: 15px
+    img.image
+      float: right
+      //clear: right
+      width: auto
+      //width: 384px
+      //height: 318px
+      margin: 0 0 30px 30px
 
 // Special sections
 #gallery
@@ -74,6 +79,8 @@
 
 #contact
   margin-bottom: 60px
+  p
+    margin: 0
   iframe
     border: 1px solid $light-grey
     +border-radius(3px)
