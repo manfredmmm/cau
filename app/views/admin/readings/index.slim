@@ -5,8 +5,7 @@
 
   .small-offset-1.small-8.columns
     h1= "Llistat de notícies:"
-
     - unless @readings.nil?
       ul#readings
         - @readings.each do |new|
-          li= link_to "#{new.title} [dia: #{new.updated_at.strftime('%d/%m/%Y - %H:%Mh')}]", edit_admin_reading_path(new)
+          li= link_to "#{new.title} [dia: #{ new.created_at.strftime('%d/%m/%Y - %H:%Mh') }]", edit_admin_reading_path(new)

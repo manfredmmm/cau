@@ -5,7 +5,7 @@ module Admin
 
     def index
       index! do
-        @readings.order('updated_at DESC')
+        @readings = Reading.order('created_at DESC')
       end
     end
 

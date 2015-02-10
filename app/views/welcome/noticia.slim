@@ -1,5 +1,8 @@
 section#reading
   h1= @new.title
-  .slides
-    = image_tag(@new.image_url)
-  .text= raw(@new.content)
+  = image_tag(@new.image_url)
+  = raw(@new.content)
+
+a.goback href="#{root_path}"
+  i.icon-chevron-left
+  p= "Tornar"
