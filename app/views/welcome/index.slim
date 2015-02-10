@@ -4,23 +4,23 @@ section#cover
 - unless @aboutus.nil?
   section.content#aboutus
     h2= @aboutus.title
-    = raw(@aboutus.content)
     = image_tag(@aboutus.image_url, class: "image") unless @aboutus.image_url.blank?
+    = raw(@aboutus.content)
 - unless @units.nil?
   section.content.right#units
     h2= @units.title
-    = raw(@units.content)
     = image_tag(@units.image_url, class: "image", align: "right") unless @units.image_url.blank?
+    = raw(@units.content)
 - unless @caps.nil?
   section.content#caps
     h2= @caps.title
-    = raw(@caps.content)
     = image_tag(@caps.image_url, class: "image") unless @caps.image_url.blank?
+    = raw(@caps.content)
 - unless @history.nil?
   section.content.right#history
     h2= @history.title
-    = raw(@history.content)
     = image_tag(@history.image_url, class: "image") unless @history.image_url.blank?
+    = raw(@history.content)
 - unless @news.empty?
   section#news.content
     h2= "Notícies"
@@ -39,13 +39,13 @@ section#gallery.content
 section#sleep.content
   - unless @sleep.nil?
     h2= @sleep.title
-    = raw(@sleep.content)
     = image_tag(@sleep.image_url, class: "image") unless @sleep.image_url.blank?
+    = raw(@sleep.content)
 section#signin.content.right
   - unless @signin.nil?
     h2= @signin.title
-    = raw(@signin.content)
     = image_tag(@signin.image_url, class: "image") unless @signin.image_url.blank?
+    = raw(@signin.content)
 section#contact.content
   h2= "On som i com ens podeu trobar"
   = google_map

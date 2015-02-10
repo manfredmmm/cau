@@ -10,7 +10,7 @@ header
   width: 100%
   z-index: 9999
   background-color: $white
-  +opacity(0.9)
+  +opacity(0.97)
   position: absolute
   bottom: 0
   &.fixed
@@ -26,10 +26,10 @@ header
   height: 40px
   line-height: 40px
   ul.dropdown-menu
-    +box-shadow(0 2px 5px $grey)
+    +box-shadow(-1px 2px 5px $light-grey)
   &.top
     ul.dropdown-menu
-      +box-shadow(0 -2px 5px $grey)
+      +box-shadow(0 -2px 5px $light-grey)
   &:before, &:after
     display: none
   ul
@@ -75,7 +75,7 @@ header
 
 #dropdown-1
   width: 150px
-  +opacity(0.9)
+  +opacity(0.97)
   a
     text-align: center
     background-color: transparent
