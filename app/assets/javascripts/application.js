@@ -76,12 +76,7 @@ $(function () {
     if ($(window).scrollTop() < 100) {
         $('#dropdown-1').on('show', function(event, dropdownData) {
             $('.dropdown.dropdown-tip').addClass('top');
-            $('.dropdown.dropdown-tip').css('top', windowHeight - 167);
-        });
-    } else {
-        $('#dropdown-1').on('show', function(event, dropdownData) {
-            $('.dropdown.dropdown-tip').removeClass('top');
-            $('.dropdown.dropdown-tip').css('top', 40);
+            $('.dropdown.dropdown-tip').css('top', windowHeight - 208);
         });
     }
 
