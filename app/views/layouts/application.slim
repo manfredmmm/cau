@@ -12,7 +12,7 @@ html
       nav#menu
         ul
           li= link_to image_tag("cardenallluch.png"), root_path, class: "home", title: "AEiG Cardenal Lluch"
-          li= link_to raw("Cardenal Lluch <i class='icon-angle-down'></i>"), "#aboutus", :'data-dropdown' => '#dropdown-1', class: "submenu"
+          li.submenu= link_to raw("Cardenal Lluch <i class='icon-angle-down'></i>"), "#aboutus", :'data-dropdown' => '#dropdown-1', class: "submenu"
           li= link_to "Notícies", "#news" unless @news.nil?
           li= link_to "Galeria", "#gallery"
           li= link_to @sleep.title, "#sleep" unless @sleep.blank?
