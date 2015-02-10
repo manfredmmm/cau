@@ -24,9 +24,18 @@ body
     font-family: $title
     height: 40px
     line-height: 40px
+    ul.dropdown-menu
+      +box-shadow(0 2px 5px $grey)
+    &.top
+      ul.dropdown-menu
+        +box-shadow(0 -2px 5px $grey)
+    &:before, &:after
+      display: none
     ul
       +inline-block-list
     a
+      i
+        margin-left: 10px
       &.home
         width: 31px
         margin-right: 50px
@@ -69,7 +78,9 @@ body
     a
       text-align: center
       background-color: transparent
-
+    ul.dropdown-menu
+      +border-radius(0)
+    
   a.top
     width: 40px
     height: 40px
@@ -79,7 +90,7 @@ body
     color: white
     position: fixed
     +border-radius(3px)
-    bottom: 60px
+    bottom: 20px
     right: 20px
     z-index: 99
     font-size: 16px
