@@ -9,6 +9,6 @@
       ul#sections
         - @sections.each do |section|
           li
-            = link_to section.title, edit_admin_section_path(section)
-            = link_to "Delete", admin_section_path(section), method: :delete, confirm: "Estàs segur?"
-
+            span= section.title
+            = link_to "Edit", edit_admin_section_path(section), class: "button radius tiny"
+            = link_to "Delete", admin_section_path(section), method: :delete, confirm: "Estàs segur que vols eliminar la secció?", class: "button radius alert tiny"

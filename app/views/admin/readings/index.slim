@@ -8,4 +8,7 @@
     - unless @readings.nil?
       ul#readings
         - @readings.each do |new|
-          li= link_to "#{new.title} [dia: #{ new.created_at.strftime('%d/%m/%Y - %H:%Mh') }]", edit_admin_reading_path(new)
+          li
+            span= "#{new.title} [dia: #{ new.created_at.strftime('%d/%m/%Y - %H:%Mh') }]"
+            = link_to "Edit", edit_admin_reading_path(new), class: "button radius tiny"
+            = link_to "Delete", admin_reading_path(new), method: :delete, confirm: "Estàs segur que vols eliminar la notícia?", class: "button radius tiny alert"

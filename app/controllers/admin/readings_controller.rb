@@ -10,12 +10,15 @@ module Admin
     end
 
     def create
-      create! { admin_root_path }
+      create! { admin_readings_path }
     end
      
     def update
-      update! { admin_root_path }
+      update! { admin_readings_path }
     end
 
+    def destroy
+      destroy! { admin_readings_path }
+    end
   end
 end
