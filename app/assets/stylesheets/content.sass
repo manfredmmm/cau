@@ -23,15 +23,18 @@ ol
 // Sections style
 .content
   +clearfix
-  +box-sizing(border-box)
-  +border-radius(3px)
-  +box-shadow($light-grey 0 0 20px)
+  //+box-sizing(border-box)
+  //+border-radius(3px)
+  //+box-shadow($light-grey 0 0 20px)
+  //background-color: white
   width: 960px
   margin: 0 auto
-  background-color: white
-  margin-top: 30px
+  margin-top: 50px
   padding: 20px 40px
   font-size: 15px
+  h2
+    font-weight: 700
+    margin-bottom: 30px
   p
     margin-bottom: 15px
   img.image
@@ -39,7 +42,7 @@ ol
     clear: left
     margin: 0 30px 30px 0
   &.right
-    h2
+    //h2
       text-align: right
     img.image
       float: right
@@ -115,3 +118,5 @@ ol
     border-bottom: 1px solid $grey
   ul.links
     list-style: none
+    &:hover
+      text-decoration: underline
