@@ -29,7 +29,7 @@ section#cover
         li.new class=('mid' if (index == 1 || index == 4))
           = render "reading", new: new
 section#gallery.content
-  h2= "Les nostres instal·lacions"
+  h2= "Galeria"
   - unless @installations.nil?
     ul#installations
       - @installations.each do |installation|
@@ -41,6 +41,7 @@ section#sleep.content
     h2= @sleep.title
     = image_tag(@sleep.image_url, class: "image") unless @sleep.image_url.blank?
     = raw(@sleep.content)
+    iframe src="https://www.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=cardenallluch%40gmail.com&amp;color=%238C500B&amp;ctz=Europe%2FMadrid" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"
 section#signin.content.right
   - unless @signin.nil?
     h2= @signin.title
@@ -62,3 +63,9 @@ section#contact.content
     li
       p= "Necessites més informació?"
       = mail_to "cardenallluch@gmail.com", "Envia'ns un correu!", subject: "Contacte via web"
+  .links-section
+    h4= "Altres links d'interés"
+    ul.links
+      li= link_to "Pàgina de Facebook", "https://www.facebook.com/aeigcardenallluch", target: "_blank"
+      li= link_to "Canal de YouTube", "https://www.youtube.com/channel/UCF5ROPEvBgVBMWBg32zuphw", target: "_blank"
+      li= link_to "Minyons escoltes i guies de Catalunya", "http://www.escoltesiguies.cat/", target: "_blank"
