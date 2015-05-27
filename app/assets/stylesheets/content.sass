@@ -4,8 +4,8 @@ a
   text-decoration: underline
   &:hover
     text-decoration: underline
-strong
-  font-weight: 900
+strong, b
+  font-weight: bold
   letter-spacing: .01em
 em
   font-style: italic
@@ -23,10 +23,6 @@ ol
 // Sections style
 .content
   +clearfix
-  //+box-sizing(border-box)
-  //+border-radius(3px)
-  //+box-shadow($light-grey 0 0 20px)
-  //background-color: white
   width: 960px
   margin: 0 auto
   margin-top: 50px
@@ -36,7 +32,10 @@ ol
     font-weight: 700
     margin-bottom: 30px
   p
-    margin-bottom: 15px
+    margin-bottom: 8px
+    +clearfix
+  ul
+    +clearfix
   img.image
     float: left
     clear: left
@@ -118,5 +117,6 @@ ol
     border-bottom: 1px solid $grey
   ul.links
     list-style: none
-    &:hover
-      text-decoration: underline
+    a
+      &:hover
+        text-decoration: underline
