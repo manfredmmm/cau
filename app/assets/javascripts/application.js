@@ -13,8 +13,6 @@
 $(function () {
     "use strict";
 
-    //$(document).foundation();
-
     $('#slides').superslides({
         slide_speed: '1000',
         slide_easing: 'easeInOutCubic',
