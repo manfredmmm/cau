@@ -39,21 +39,27 @@ a.goback
 
 #news
   padding-bottom: 0
+  ul
+    margin-left: 0
+    margin-bottom: 30px
+    +clearfix()
   li.new
     width: 32.5%
-    height: 475px
     float: left
     position: relative
     &.mid
       margin: 0 10px
+    img
+      +scale(1.15)
     &:hover
       img
         +opacity(1)
         +transition-duration(0.4s)
-        +scale(1.1)
+        +scale(1.3)
       a.more
         text-decoration: underline
     a.cover
+      +clearfix()
       width: 100%
       max-height: 279px
       overflow: hidden
@@ -61,7 +67,7 @@ a.goback
       margin-bottom: 10px
       display: block
       img
-        +opacity(0.85)
+        +opacity(0.95)
         width: 100%
         overflow: hidden
       h3.title
@@ -73,28 +79,19 @@ a.goback
         color: $white
         background: rgba($grey, .5)
     p
+      +clearfix()
       width: 100%
       float: left
       color: $grey
       margin-bottom: 5px
-      min-height: 105px
+      text-indent: 0
     span.date
       font-size: 13px
       line-height: 18px
       font-family: $links
-      bottom: 30px
-      position: absolute
-      left: 0
+      display: block
+      text-align: right
       &:before
         content: "["
       &:after
         content: "]"
-    a.more
-      font-size: 14px
-      font-family: $links
-      color: $black
-      bottom: 30px
-      position: absolute
-      right: 0
-      &:hover
-        text-decoration: underline
