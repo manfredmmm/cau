@@ -3,9 +3,13 @@
 
 #reading
   +clearfix
-  width: 960px
+  width: 910px
   margin: 0 auto
-  min-height: calc(100vh - 75px)
+  min-height: 100vh
+  background-color: $white
+  color: $dark-grey
+  padding: 0 25px
+  position: relative
   h1
     font-family: $title
     font-size: 22px
@@ -21,21 +25,21 @@
     +clearfix
     margin-bottom: 10px
     font-size: 14px
-a.goback
-  width: 960px
-  display: block
-  margin: 0 auto
-  height: 45px
-  line-height: 45px
-  margin-top: 30px
-  color: $grey
-  text-decoration: none
-  i, span
+  a.goback
     display: inline-block
-  i
-    margin-right: 10px
-  span
-    font-size: 14px
+    height: 45px
+    line-height: 45px
+    color: $grey
+    text-decoration: none
+    position: absolute
+    top: 15px
+    right: 30px
+    i, span
+      display: inline-block
+    i
+      margin-right: 10px
+    span
+      font-size: 14px
 
 #news
   padding-bottom: 0
@@ -45,6 +49,7 @@ a.goback
     +clearfix()
   li.new
     width: 32.5%
+    height: 380px
     float: left
     position: relative
     &.mid
@@ -83,14 +88,15 @@ a.goback
       width: 100%
       float: left
       color: $grey
-      margin-bottom: 5px
+      margin-bottom: 2px
       text-indent: 0
     span.date
       font-size: 13px
       line-height: 18px
       font-family: $links
-      display: block
-      text-align: right
+      position: absolute
+      bottom: 0
+      right: 0
       &:before
         content: "["
       &:after
