@@ -18,6 +18,7 @@ gem 'unicorn'
 gem 'ckeditor'
 gem 'friendly_id'
 gem "bower-rails", "~> 0.9.1"
+gem 'meta-tags'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
