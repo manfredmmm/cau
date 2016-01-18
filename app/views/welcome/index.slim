@@ -41,7 +41,7 @@ section#sleep.content
     h2= @sleep.title
     = image_tag(@sleep.image_url, class: "image") unless @sleep.image_url.blank?
     = raw(@sleep.content)
-    iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=b6nssqgrsmdbg4regf0cubjpik%40group.calendar.google.com&amp;color=%23711616&amp;ctz=Europe%2FMadrid" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"
+    iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;height=600&amp;wkst=2&amp;hl=ca&amp;bgcolor=%23FFFFFF&amp;src=b6nssqgrsmdbg4regf0cubjpik%40group.calendar.google.com&amp;color=%23711616&amp;ctz=Europe%2FMadrid" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"
 section#signin.content.right
   - unless @signin.nil?
     h2= @signin.title
