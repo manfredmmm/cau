@@ -2,12 +2,13 @@
   h2= "Agrupament Escolta i Guia"
   h1= "Cardenal Lluch"
 
-#slides
-  ul.slides-container
-    - @covers.each do |cover|
-      li
-        = image_tag(cover.image_url, alt: cover.title, title: cover.title)
-  
-  nav.slides-navigation
-    = link_to raw("<i class='icon-angle-right'></i>"), "#", class: "next"
-    = link_to raw("<i class='icon-angle-left'></i>"), "#", class: "prev"
+-unless @covers.nil?
+  #slides
+    ul.slides-container
+      - @covers.each do |cover|
+        li
+          = image_tag(cover.image_url, alt: cover.title, title: cover.title)
+    
+    nav.slides-navigation
+      = link_to raw("<i class='icon-angle-right'></i>"), "#", class: "next"
+      = link_to raw("<i class='icon-angle-left'></i>"), "#", class: "prev"
