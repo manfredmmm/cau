@@ -22,9 +22,10 @@ def current_git_branch
   branch
 end
 
-server "188.226.212.25", :cau, :app, :db, :web, primary: true
+server "188.166.7.76", :cau, :app, :db, :web, primary: true
 set :rails_env, "production"
-set :server_name, "manfredmmm"
+set :server_name, "cau"
+ssh_options[:port] = 37546
 
 set :default_environment, {
     'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
@@ -57,7 +58,7 @@ namespace :deploy do
     task :precompile, roles: :web, except: {no_release: true} do
       run_locally "bundle exec rake assets:precompile RAILS_ENV=production"
       find_servers_for_task(current_task).each do |server|
-        run_locally "rsync -vr --exclude='.DS_Store' public/assets #{user}@#{server.host}:#{shared_path}/"
+        run_locally "rsync -vr --exclude='.DS_Store' -e 'ssh -p #{ssh_options[:port]}' public/assets #{user}@#{server.host}:#{shared_path}/"
       end
       run_locally "rm -rf public/assets"
     end
